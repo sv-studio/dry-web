@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "c76d20e75dd667e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "698d2ab0d333d5f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4706c434be0322a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "21db2432121fc69b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ffa520a4f1cf4ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3dffe4458ad81e80",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d88ecc87dc8c9b42",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "dfd9085c26abed62",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "31ae6d76731a9cf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5c6e9f95f7e21c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cea41436732faf2f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for README"
+            }
+          },
+          {
+            "id": "aca0ade3db09b023",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from README"
+            }
+          },
+          {
+            "id": "2b8ad504d6f8a88e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ab84474cb32e5d3a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "593fcde860ec3c8c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d4706c434be0322a",
+  "lastOpenFiles": [
+    "src/app/form/page.tsx.tmp.35168.1763512667931",
+    "src/components/testimonials.tsx.tmp.35168.1763512230308",
+    "public/testimonials/jorge.jpg",
+    "public/testimonials/adriana.jpg",
+    "src/app/pricing/page.tsx.tmp.35168.1763500049868",
+    "public/logo-cloud/pucp.png.sb-ef81f11d-EkbqFP",
+    "src/app/pricing/page.tsx.tmp.35168.1763497418723",
+    "src/app/pricing/page.tsx.tmp.35168.1763496617382",
+    "src/components/animated-gradient.tsx",
+    "CLAUDE.md.tmp.22323.1763495734115",
+    "src/app/privacy/page.tsx",
+    "src/app/privacy",
+    "src/app/terms/page.tsx",
+    "public/logo-cloud/rimac.png",
+    "public/logo-cloud/pucp.png",
+    "public/logo-cloud/interbank.png",
+    "public/logo-cloud/aea.png",
+    "public/logo-cloud/crehana.png",
+    "node_modules/next/README.md",
+    "node_modules/next/license.md",
+    "node_modules/@heroicons/react/README.md",
+    "node_modules/es-abstract/README.md",
+    "node_modules/es-abstract/CHANGELOG.md",
+    "node_modules/typescript/SECURITY.md",
+    "node_modules/typescript/README.md",
+    "node_modules/lodash/release.md",
+    "node_modules/lodash/README.md",
+    "node_modules/caniuse-lite/README.md",
+    "node_modules/@img/sharp-libvips-darwin-arm64/README.md",
+    "node_modules/eslint/README.md",
+    "node_modules/dayjs/README.md",
+    "node_modules/dayjs/CHANGELOG.md",
+    "node_modules/react-dom/README.md",
+    "node_modules/next/dist/compiled/regenerator-runtime/README.md",
+    "node_modules/@typescript-eslint/eslint-plugin/README.md",
+    "node_modules/next/dist/compiled/react-refresh/README.md",
+    "node_modules/next/dist/compiled/react-is/README.md",
+    "node_modules/eslint-plugin-react/README.md",
+    "node_modules/@headlessui/react/README.md",
+    "node_modules/eslint-plugin-jsx-a11y/README.md",
+    "node_modules/eslint-plugin-jsx-a11y/LICENSE.md",
+    "node_modules/eslint-plugin-jsx-a11y/CHANGELOG.md",
+    "node_modules/eslint-plugin-jsx-a11y/docs/rules/tabindex-no-positive.md",
+    "public/testimonials/veronica-winton.jpg",
+    "public/testimonials/tina-yards.jpg",
+    "public/testimonials/harriet-arron.jpg"
+  ]
+}
