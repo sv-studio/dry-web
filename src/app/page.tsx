@@ -28,10 +28,10 @@ function Hero() {
         <Navbar />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Servicios de software que entregan resultados.
+            De la idea a la app en un instante.
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            SV transforma tus ideas en soluciones de software listas para producción.
+            Construye con IA que entiende tu negocio.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="/form">Comenzar</Button>
@@ -50,12 +50,12 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-16">
         <Heading as="h2" className="max-w-3xl">
-          Soluciones completas para tu negocio digital.
+          Soluciones completas para tu negocio digital
         </Heading>
         <Screenshot
           width={1216}
           height={768}
-          src="/screenshots/app.png"
+          src="/videos/videohero.mp4"
           className="mt-16 w-full max-w-304"
         />
       </Container>
@@ -128,15 +128,15 @@ function DarkBentoSection() {
       <Container>
         <Subheading dark>Capacitación</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
-          Potencia a tu equipo con IA y mejores prácticas.
+          Automatizamos y digitalizamos los procesos más críticos de tu empresa
         </Heading>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           <BentoCard
             dark
-            eyebrow="Claude Code"
-            title="Entrenamiento en IA"
-            description="Talleres de 1-2 días para que tu equipo domine Claude Code y aumente su productividad hasta 10x."
+            eyebrow="Desarrollo Web"
+            title="Aplicaciones web modernas"
+            description="Desde landing pages hasta sistemas complejos con integración a bases de datos. Construimos con Next.js, Astro, React y Tailwind CSS."
             graphic={
               <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
             }
@@ -146,25 +146,25 @@ function DarkBentoSection() {
           <BentoCard
             dark
             eyebrow="Integraciones"
-            title="Herramientas modernas"
-            description="Configuramos Git, CI/CD y las mejores herramientas de desarrollo para workflows eficientes."
+            title="Conecta tus herramientas"
+            description="Integramos inteligencia artificial para automatizar tus flujos de trabajo. También conectamos tu producto con Slack, Discord, Airtable y APIs externas para mantener todo sincronizado."
             graphic={<LogoTimeline />}
             // `overflow-visible!` is needed to work around a Chrome bug that disables the mask on the graphic.
             className="z-10 overflow-visible! lg:col-span-2 lg:rounded-tr-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Equipo"
-            title="Capacitación personalizada"
-            description="Adaptamos el contenido a los casos de uso específicos de tu empresa y tu stack tecnológico."
+            eyebrow="Soporte"
+            title="Acompañamiento cercano"
+            description="Trabajamos de la mano, uno a uno. Mejoramos tu proyecto continuamente, corregimos errores, optimizamos rendimiento y gestionamos tus pagos de forma segura."
             graphic={<LinkedAvatars />}
             className="lg:col-span-2 lg:rounded-bl-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Soporte"
-            title="Acompañamiento continuo"
-            description="Plan de adopción, materiales de capacitación y soporte post-taller para garantizar el éxito de tu equipo."
+            eyebrow="Capacitaciones"
+            title="Potencia a tu equipo con IA"
+            description="Capacitamos a tu equipo en Claude Code para diseñar y desarrollar productos web y app 10 veces más rápido, además de optimizar las operaciones de tu empresa con IA."
             graphic={
               <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat" />
             }
