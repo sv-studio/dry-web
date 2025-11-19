@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Airtable from 'airtable'
 
-// Initialize Airtable
-const base = new Airtable({
-  apiKey: process.env.AIRTABLE_TOKEN!,
-}).base(process.env.AIRTABLE_BASE_ID!)
-
-const contactsTable = base(process.env.AIRTABLE_CONTACTS_TABLE_ID!)
-const companiesTable = base(process.env.AIRTABLE_COMPANIES_TABLE_ID!)
-
 export async function POST(request: NextRequest) {
   try {
+    // Initialize Airtable inside the function
+    const base = new Airtable({
+      apiKey: process.env.AIRTABLE_TOKEN!,
+    }).base(process.env.AIRTABLE_BASE_ID!)
+
+    const contactsTable = base(process.env.AIRTABLE_CONTACTS_TABLE_ID!)
+    const companiesTable = base(process.env.AIRTABLE_COMPANIES_TABLE_ID!)
+
     const formData = await request.formData()
 
     // Extract form fields
