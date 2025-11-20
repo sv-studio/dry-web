@@ -21,16 +21,16 @@ const testimonials = [
   {
     img: '/testimonials/adriana.jpg',
     name: 'Adriana Suárez',
-    title: 'Founder, DRY',
+    title: 'Founder, SV',
     quote:
-      'SV transformó nuestra visión en una plataforma lista para producción en tiempo récord. Su experiencia y atención al detalle superaron nuestras expectativas.',
+      'Mi pasión es transformar ideas en productos reales que generen impacto. Fundé SV para ayudar a emprendedores a materializar su visión sin las barreras técnicas que yo enfrenté al comenzar.',
   },
   {
     img: '/testimonials/jorge.jpg',
     name: 'Jorge Vicuña',
-    title: 'CTO, DRY',
+    title: 'CTO, SV',
     quote:
-      'Trabajar con SV fue muy fluido. Entendieron nuestras necesidades y entregaron una solución robusta que escaló con nuestro negocio.',
+      'Me apasiona construir software que no solo funciona, sino que escala y evoluciona. En SV, combinamos las mejores tecnologías con código limpio para entregar soluciones que perduran.',
   },
 ]
 
@@ -164,9 +164,9 @@ export function Testimonials() {
     <div className="overflow-hidden py-32">
       <Container>
         <div ref={setReferenceWindowRef}>
-          <Subheading>Lo que dicen nuestros clientes</Subheading>
+          <Subheading>Nuestro equipo</Subheading>
           <Heading as="h3" className="mt-2">
-            Confianza de profesionales.
+            Pasión por construir el futuro
           </Heading>
         </div>
       </Container>

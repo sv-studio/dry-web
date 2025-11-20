@@ -3,7 +3,7 @@ import { clsx } from 'clsx'
 export function Logo({ className }: { className?: string }) {
   return (
     <img
-      src="/logo.png"
+      src="/logodry.png"
       alt="SV Logo"
       className={clsx(className, 'object-contain')}
     />

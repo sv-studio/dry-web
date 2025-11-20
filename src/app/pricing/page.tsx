@@ -15,97 +15,97 @@ import {
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Precios',
   description:
-    'AI development training, web development, and custom solutions. Choose the service that fits your needs.',
+    'Capacitación en desarrollo con IA, desarrollo web y soluciones personalizadas. Elige el servicio que se ajuste a tus necesidades.',
 }
 
 const tiers = [
   {
-    name: 'Claude Code Training' as const,
+    name: 'Capacitación en IA' as const,
     slug: 'claude-training',
-    description: 'Empower your team with AI development skills.',
-    priceMonthly: 3000,
+    description: 'Que tu equipo entregue diseño o software 10x más rápido a tus clientes',
+    priceMonthly: 500,
     href: '/form',
     highlights: [
-      { description: 'Workshop presencial/remoto 1-2 días' },
-      { description: 'Hands-on practice with real projects' },
-      { description: 'Setup and installation included' },
-      { description: 'Best practices and workflows' },
-      { description: 'Custom adoption plan for your team' },
-      { description: 'Integration with Git, CI/CD tools' },
+      { description: 'Workshop 1-2 días (3h/día)' },
+      { description: 'Hasta 15 personas por sesión' },
+      { description: 'Práctica con proyectos reales' },
+      { description: 'Setup e instalación incluidos' },
+      { description: 'Mejores prácticas y workflows' },
+      { description: 'Plan de adopción personalizado' },
     ],
     features: [
-      { section: 'Training', name: 'Workshop duration', value: '1-2 days' },
-      { section: 'Training', name: 'Team size', value: '5-10 people' },
-      { section: 'Training', name: 'Format', value: 'Remote/On-site' },
-      { section: 'Training', name: 'Hands-on exercises', value: true },
-      { section: 'Training', name: 'Custom use cases', value: true },
-      { section: 'Setup', name: 'Claude Code installation', value: true },
-      { section: 'Setup', name: 'Tool integration (Git, CI/CD)', value: true },
-      { section: 'Setup', name: 'Custom configurations', value: true },
-      { section: 'Setup', name: 'Best practices guide', value: true },
-      { section: 'Support', name: 'Adoption plan', value: true },
-      { section: 'Support', name: 'Training materials', value: true },
-      { section: 'Support', name: 'Post-workshop Q&A', value: '1 week' },
+      { section: 'Capacitación', name: 'Duración del workshop', value: '1-2 días' },
+      { section: 'Capacitación', name: 'Tamaño del equipo', value: '5-10 personas' },
+      { section: 'Capacitación', name: 'Formato', value: 'Remoto/Presencial' },
+      { section: 'Capacitación', name: 'Ejercicios prácticos', value: true },
+      { section: 'Capacitación', name: 'Casos de uso personalizados', value: true },
+      { section: 'Configuración', name: 'Instalación Claude Code', value: true },
+      { section: 'Configuración', name: 'Integración de herramientas (Git, CI/CD)', value: true },
+      { section: 'Configuración', name: 'Configuraciones personalizadas', value: true },
+      { section: 'Configuración', name: 'Guía de mejores prácticas', value: true },
+      { section: 'Soporte', name: 'Plan de adopción', value: true },
+      { section: 'Soporte', name: 'Materiales de capacitación', value: true },
+      { section: 'Soporte', name: 'Q&A post-workshop', value: '1 semana' },
     ],
   },
   {
-    name: 'Essential Web Package' as const,
+    name: 'Desarrollo Web' as const,
     slug: 'web-package',
-    description: 'Complete web solution with integrations.',
-    priceMonthly: 3000,
+    description: 'Sitio web profesional con diseño responsive, integraciones y hosting incluido',
+    priceMonthly: 250,
     href: '/form',
     highlights: [
-      { description: 'Responsive design (mobile-first)' },
-      { description: 'Contact form + SEO optimization' },
-      { description: 'CMS for easy content editing' },
-      { description: 'Hosting & domain (first year included)' },
-      { description: 'Airtable + payment gateway integration' },
-      { description: 'Custom API & webhooks' },
+      { description: 'Diseño responsive mobile-first' },
+      { description: 'Formularios de contacto + SEO' },
+      { description: 'CMS para editar contenido fácilmente' },
+      { description: 'Hosting Vercel y dominio ($8-20/mes)' },
+      { description: 'Integración Airtable' },
+      { description: 'API personalizada y webhooks' },
     ],
     features: [
-      { section: 'Design', name: 'Responsive design', value: true },
-      { section: 'Design', name: 'Custom UI/UX', value: true },
-      { section: 'Design', name: 'SEO optimization', value: true },
-      { section: 'Design', name: 'Contact form', value: true },
-      { section: 'Design', name: 'Analytics integration', value: true },
-      { section: 'Development', name: 'CMS (content editing)', value: true },
-      { section: 'Development', name: 'Performance optimized', value: true },
-      { section: 'Development', name: 'Airtable integration', value: true },
-      { section: 'Development', name: 'Payment gateway', value: true },
-      { section: 'Development', name: 'Custom API + Webhooks', value: true },
-      { section: 'Support', name: 'Timeline', value: '2-3 weeks' },
-      { section: 'Support', name: 'Hosting + Domain (1yr)', value: true },
+      { section: 'Diseño', name: 'Diseño responsive', value: true },
+      { section: 'Diseño', name: 'UI/UX personalizado', value: true },
+      { section: 'Diseño', name: 'Optimización SEO', value: true },
+      { section: 'Diseño', name: 'Formulario de contacto', value: true },
+      { section: 'Diseño', name: 'Integración de analytics', value: true },
+      { section: 'Desarrollo', name: 'CMS (edición de contenido)', value: true },
+      { section: 'Desarrollo', name: 'Optimizado en rendimiento', value: true },
+      { section: 'Desarrollo', name: 'Integración Airtable', value: true },
+      { section: 'Desarrollo', name: 'Pasarela de pagos', value: true },
+      { section: 'Desarrollo', name: 'API personalizada + Webhooks', value: true },
+      { section: 'Soporte', name: 'Timeline', value: '2-3 semanas' },
+      { section: 'Soporte', name: 'Hosting + Dominio (1 año)', value: true },
     ],
   },
   {
-    name: 'Tailored Services' as const,
+    name: 'Servicios Personalizados' as const,
     slug: 'tailored',
-    description: 'Custom solutions combining training and development.',
+    description: 'Soluciones a medida combinando capacitación y desarrollo',
     priceMonthly: null,
     href: '/form',
     highlights: [
-      { description: 'Large-scale implementations' },
-      { description: 'Multi-team training programs' },
-      { description: 'Dedicated account manager' },
-      { description: 'Quarterly strategy sessions' },
-      { description: 'Custom SLA agreements' },
-      { description: 'Priority support' },
+      { description: 'Implementaciones a gran escala' },
+      { description: 'Programas de capacitación multi-equipo' },
+      { description: 'Account manager dedicado' },
+      { description: 'Sesiones de estrategia trimestrales' },
+      { description: 'Acuerdos SLA personalizados' },
+      { description: 'Soporte prioritario' },
     ],
     features: [
-      { section: 'Services', name: 'Training + Development combo', value: true },
-      { section: 'Services', name: 'Large-scale implementations', value: true },
-      { section: 'Services', name: 'Multi-team programs', value: true },
-      { section: 'Services', name: 'Custom integrations', value: true },
-      { section: 'Services', name: 'Scalable architecture', value: true },
-      { section: 'Management', name: 'Dedicated account manager', value: true },
-      { section: 'Management', name: 'Quarterly strategy sessions', value: true },
-      { section: 'Management', name: 'Custom SLA agreements', value: true },
-      { section: 'Management', name: 'Priority support', value: true },
-      { section: 'Support', name: 'Ongoing maintenance', value: 'Custom' },
-      { section: 'Support', name: 'Training sessions', value: 'Unlimited' },
-      { section: 'Support', name: 'Response time', value: '< 4 hours' },
+      { section: 'Servicios', name: 'Combo capacitación + desarrollo', value: true },
+      { section: 'Servicios', name: 'Implementaciones a gran escala', value: true },
+      { section: 'Servicios', name: 'Programas multi-equipo', value: true },
+      { section: 'Servicios', name: 'Integraciones personalizadas', value: true },
+      { section: 'Servicios', name: 'Arquitectura escalable', value: true },
+      { section: 'Gestión', name: 'Account manager dedicado', value: true },
+      { section: 'Gestión', name: 'Sesiones de estrategia trimestrales', value: true },
+      { section: 'Gestión', name: 'Acuerdos SLA personalizados', value: true },
+      { section: 'Gestión', name: 'Soporte prioritario', value: true },
+      { section: 'Soporte', name: 'Mantenimiento continuo', value: 'Personalizado' },
+      { section: 'Soporte', name: 'Sesiones de capacitación', value: 'Ilimitadas' },
+      { section: 'Soporte', name: 'Tiempo de respuesta', value: '< 4 horas' },
     ],
   },
 ]
@@ -113,10 +113,9 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Services designed to accelerate your team.</Heading>
+      <Heading as="h1">Servicios para la era de la IA</Heading>
       <Lead className="mt-6 max-w-3xl">
-        From AI development training to web solutions, we help teams build better
-        software faster. Choose the service that fits your needs.
+        Desde capacitación en IA hasta desarrollo web completo, ayudamos a equipos a construir mejor software más rápido.
       </Lead>
     </Container>
   )
@@ -153,21 +152,21 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
                 </div>
                 <div className="text-sm/5 text-gray-950/75">
                   <p>USD</p>
-                  <p>per project</p>
+                  {tier.slug === 'web-package' ? <p>desde</p> : <p>por equipo</p>}
                 </div>
               </>
             ) : (
               <div className="text-3xl font-medium text-gray-950">
-                Contact us for pricing
+                Contáctanos
               </div>
             )}
           </div>
           <div className="mt-8">
-            <Button href={tier.href}>Get started</Button>
+            <Button href={tier.href}>Comenzar</Button>
           </div>
           <div className="mt-8">
             <h3 className="text-sm/6 font-medium text-gray-950">
-              What&apos;s included:
+              Qué incluye:
             </h3>
             <ul className="mt-3 space-y-3">
               {tier.highlights.map((props, featureIndex) => (
@@ -255,7 +254,7 @@ function PricingTable({
             </td>
             <td colSpan={3} className="p-0 text-right">
               <Button variant="outline" href={selectedTier.href}>
-                Get started
+                Comenzar
               </Button>
             </td>
           </tr>
@@ -270,7 +269,7 @@ function PricingTable({
                 className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
               >
                 <Button variant="outline" href={tier.href}>
-                  Get started
+                  Comenzar
                 </Button>
               </td>
             ))}
@@ -398,7 +397,7 @@ function Testimonial() {
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
                 <p className="relative text-3xl tracking-tight text-white lg:text-4xl">
-                  &quot;SV delivered our web platform on time and within budget. Their fixed-price model gave us the certainty we needed.&quot;
+                  &quot;DRY entregó nuestra Airtable a tiempo y dentro del presupuesto. Su modelo de precio fijo nos dio la certeza que necesitábamos.&quot;
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
@@ -422,64 +421,65 @@ function FrequentlyAskedQuestions() {
     <Container>
       <section id="faqs" className="scroll-mt-8">
         <Subheading className="text-center">
-          Frequently asked questions
+          Preguntas frecuentes
         </Subheading>
         <Heading as="div" className="mt-2 text-center">
-          Your questions answered.
+          Tus dudas resueltas
         </Heading>
         <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
           <dl>
             <dt className="text-sm font-semibold">
-              What&apos;s included in the fixed price?
+              ¿Qué incluye el precio fijo?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Each tier includes everything listed in the package: design, development,
-              testing, deployment, and the specified number of revision rounds. The only
-              additional costs would be for third-party services you choose (like hosting
-              or premium APIs), which we&apos;ll discuss upfront.
+              Cada paquete incluye todo lo listado: diseño, desarrollo, pruebas,
+              despliegue y las rondas de revisión especificadas. Los únicos costos
+              adicionales serían por servicios de terceros que elijas (como hosting
+              o APIs premium), los cuales discutiremos desde el inicio.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              How does the project timeline work?
+              ¿Cómo funciona el timeline del proyecto?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Timelines are estimates based on typical projects in each tier. After our
-              initial consultation, we&apos;ll provide a detailed project plan with
-              milestones. We work in iterative sprints and share progress updates weekly,
-              so you&apos;re always in the loop.
+              Los tiempos son estimados basados en proyectos típicos de cada paquete.
+              Después de nuestra consulta inicial, proporcionaremos un plan detallado
+              con hitos. Trabajamos en sprints iterativos y compartimos actualizaciones
+              de progreso semanalmente.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              What if my project doesn&apos;t fit into these tiers?
+              ¿Qué pasa si mi proyecto no encaja en estos paquetes?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              These tiers cover most projects, but we&apos;re flexible. If your needs are
-              unique, contact us for a custom quote. We can also start with a consulting
-              session to help define the right scope and approach for your project.
+              Estos paquetes cubren la mayoría de proyectos, pero somos flexibles.
+              Si tus necesidades son únicas, contáctanos para una cotización personalizada.
+              También podemos comenzar con una sesión de consultoría para definir el
+              alcance y enfoque correcto.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              What kind of support do you offer after launch?
+              ¿Qué tipo de soporte ofrecen después del lanzamiento?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Each package includes post-launch support (30 days to 6 months depending on
-              the tier). This covers bug fixes, minor adjustments, and technical support.
-              After that period, we can arrange ongoing maintenance through a monthly
-              retainer or per-request basis.
+              Cada paquete incluye soporte post-lanzamiento (30 días a 6 meses según
+              el paquete). Esto cubre corrección de errores, ajustes menores y soporte
+              técnico. Después de ese período, podemos acordar mantenimiento continuo
+              mediante un retainer mensual o por solicitud.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              Do you work with clients outside Peru?
+              ¿Trabajan con clientes fuera de Perú?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Absolutely. We work with clients globally and are experienced in remote
-              collaboration. We adapt our communication schedule to your timezone and use
-              tools like Slack, Zoom, and project management platforms to keep everything
-              transparent and organized.
+              Por supuesto. Trabajamos con clientes globalmente y tenemos experiencia
+              en colaboración remota. Adaptamos nuestro horario de comunicación a tu
+              zona horaria y usamos herramientas como Slack, Zoom y plataformas de
+              gestión de proyectos para mantener todo transparente y organizado.
             </dd>
           </dl>
         </div>

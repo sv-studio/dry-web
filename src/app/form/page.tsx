@@ -30,23 +30,23 @@ function ContactFormSection() {
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to submit form')
+        throw new Error(data.error || 'Error al enviar el formulario')
       }
 
       // Redirect to thank you page
       router.push('/thank-you')
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred')
+      setError(err instanceof Error ? err.message : 'Ocurrió un error')
       setIsSubmitting(false)
     }
   }
 
   return (
     <Container className="mt-16">
-      <Heading as="h1">Get in touch</Heading>
+      <Heading as="h1">Contáctanos</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Contact us to discuss your project. We&apos;ll help you transform your ideas
-        into production-ready software solutions.
+        Conversemos sobre tu proyecto. Te ayudamos a transformar tus ideas
+        en soluciones de software listas para producción.
       </Lead>
 
       <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
@@ -61,7 +61,7 @@ function ContactFormSection() {
           <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-950">
-            Email address *
+            Correo electrónico *
           </label>
           <input
             type="email"
@@ -69,14 +69,14 @@ function ContactFormSection() {
             id="email"
             required
             disabled={isSubmitting}
-            placeholder="your@email.com"
+            placeholder="tu@email.com"
             className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
         <div>
           <label htmlFor="contact_name" className="block text-sm font-medium text-gray-950">
-            Full name *
+            Nombre completo *
           </label>
           <input
             type="text"
@@ -85,14 +85,14 @@ function ContactFormSection() {
             required
             minLength={2}
             disabled={isSubmitting}
-            placeholder="John Doe"
+            placeholder="Camila Pérez"
             className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
         <div>
           <label htmlFor="phone_number" className="block text-sm font-medium text-gray-950">
-            Phone number
+            Número de teléfono
           </label>
           <input
             type="tel"
@@ -106,35 +106,35 @@ function ContactFormSection() {
 
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-950">
-            Company name
+            Nombre de la empresa
           </label>
           <input
             type="text"
             name="company"
             id="company"
             disabled={isSubmitting}
-            placeholder="Acme Inc."
+            placeholder="ACME"
             className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
         <div>
           <label htmlFor="inquiry_notes" className="block text-sm font-medium text-gray-950">
-            Message
+            Mensaje
           </label>
           <textarea
             name="inquiry_notes"
             id="inquiry_notes"
             rows={4}
             disabled={isSubmitting}
-            placeholder="Tell us about your project..."
+            placeholder="Cuéntanos sobre tu proyecto..."
             className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed resize-y"
           />
         </div>
 
         <div className="pt-2">
           <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Send message'}
+            {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
           </Button>
         </div>
       </form>
@@ -143,16 +143,16 @@ function ContactFormSection() {
         {/* Right column - Contact Info */}
         <div className="lg:pl-8">
           <div className="rounded-2xl bg-gray-50 p-8">
-            <h2 className="text-xl font-semibold text-gray-950">Contact Information</h2>
+            <h2 className="text-xl font-semibold text-gray-950">Información de contacto</h2>
             <div className="mt-6 space-y-4">
               <div>
-                <p className="text-sm font-medium text-gray-600">Contact Person</p>
+                <p className="text-sm font-medium text-gray-600">Persona de contacto</p>
                 <p className="mt-1 text-base font-medium text-gray-950">
                   Adriana Suárez
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-600">Email</p>
+                <p className="text-sm font-medium text-gray-600">Correo</p>
                 <a
                   href="mailto:suarezladriana@gmail.com"
                   className="mt-1 block text-base font-medium text-gray-950 hover:text-gray-600 transition-colors"
@@ -161,7 +161,7 @@ function ContactFormSection() {
                 </a>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-600">Phone</p>
+                <p className="text-sm font-medium text-gray-600">Teléfono</p>
                 <a
                   href="tel:+51963754908"
                   className="mt-1 block text-base font-medium text-gray-950 hover:text-gray-600 transition-colors"

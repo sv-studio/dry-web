@@ -9,16 +9,8 @@ import { Subheading } from './text'
 function CallToAction() {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
-      <hgroup>
-        <Subheading>Comienza hoy</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          ¿Listo para empezar?
-          <br />
-          Cuéntanos sobre tu proyecto.
-        </p>
-      </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Transformamos tus ideas en soluciones de software listas para producción.
+      <p className="text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+        Hablemos de tu proyecto
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="/form">
