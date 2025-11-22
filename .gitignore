@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+tests/screenshots/*.png
+venv-tests/
 
 # next.js
 /.next/

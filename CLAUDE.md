@@ -549,9 +549,209 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 │       └── logo-cloud.tsx (real client logos)
 ├── public/
 │   └── logo-cloud/ (5 client logo PNGs)
-├── .env.local (Airtable credentials)
+├── .env.local (Airtable + Discord credentials)
 ├── CLAUDE.md (this file - project spec)
 └── package.json
 ```
+
+---
+
+## Discord Notifications - Security Hardened
+
+### Overview
+
+Discord notifications are sent for specific user actions:
+- ✅ Someone visits `/pricing` page (potential client)
+- ✅ Someone visits `/form` page (showing interest)
+- ✅ Someone submits the contact form (conversion)
+
+### Security Measures Implemented
+
+**1. Rate Limiting (Server-Side)**
+- **Max 20 notifications per IP per minute**
+- Prevents spam and abuse
+- In-memory store (resets on server restart)
+- Production upgrade: Use Redis for persistent rate limiting
+
+**2. Origin Validation**
+- Only accepts requests from same domain
+- Validates `origin` and `referer` headers
+- Prevents CSRF attacks
+- Rejects requests without valid origin
+
+**3. Client-Side Throttling**
+- Max 1 notification per page per session
+- Uses `sessionStorage` to track
+- Prevents duplicate notifications on hot reload
+- Silent failures (doesn't block page render)
+
+**4. Input Validation**
+- Whitelist-only pages: `/pricing`, `/form`
+- Validates all user input
+- Sanitizes user agent strings (max 100 chars)
+- No arbitrary page tracking
+
+**5. Webhook URL Protection**
+- ✅ Never exposed to client
+- ✅ Only used in API Routes (server-side)
+- ✅ `.env.local` in `.gitignore`
+- ✅ Documented in `.env.example` without real URL
+
+**6. Error Handling**
+- No sensitive data in error responses
+- Generic error messages to client
+- Detailed logging server-side only
+- Discord failures don't break form submission
+
+**7. Non-Blocking Notifications**
+- Form submission succeeds even if Discord fails
+- Async notification sending
+- User experience never blocked by Discord API
+
+### File Structure
+
+```
+src/
+├── lib/
+│   └── discord.ts
+│       ├── Rate limiting (20 req/min per IP)
+│       ├── Webhook URL security
+│       ├── Embed creation helpers
+│       └── Error handling
+├── app/
+│   ├── api/
+│   │   ├── contact/route.ts (Form + Discord notification)
+│   │   └── visitor/route.ts (Page visit tracking + security)
+│   ├── pricing/page.tsx (VisitorTracker added)
+│   └── form/page.tsx (VisitorTracker added)
+└── components/
+    └── visitor-tracker.tsx (Client-side with throttling)
+```
+
+### Configuration
+
+**1Password CLI:**
+```bash
+# Get Discord webhook URL
+op item get "Discord Webhook Cluco" --fields credential --reveal
+
+# Export as environment variable
+export DISCORD_WEBHOOK_URL=$(op item get "Discord Webhook Cluco" --fields credential --reveal)
+```
+
+**For Vercel Deployment:**
+1. Go to Vercel Project Settings
+2. Navigate to Environment Variables
+3. Add: `DISCORD_WEBHOOK_URL` = (webhook URL from 1Password)
+4. Scope: Production, Preview, Development
+5. Save
+
+**Security Checklist for Deployment:**
+- ✅ Verify `.env.local` is in `.gitignore`
+- ✅ Never commit `.env.local` to Git
+- ✅ Configure `DISCORD_WEBHOOK_URL` in Vercel dashboard
+- ✅ Test notifications in preview deployment first
+- ✅ Monitor Discord channel for spam
+- ✅ Regenerate webhook if compromised
+
+### Rate Limit Details
+
+**Server-Side (per IP):**
+- Window: 60 seconds
+- Max requests: 20
+- Response: `429 Too Many Requests`
+- Auto cleanup: Every 5 minutes
+
+**Client-Side (per session):**
+- Window: Browser session
+- Max requests: 1 per page
+- Storage: `sessionStorage`
+- Reset: On browser close
+
+### Discord Webhook Permissions
+
+**What the webhook CAN do:**
+- ✅ Send messages to specific channel
+- ✅ Create embeds with formatted content
+
+**What the webhook CANNOT do:**
+- ❌ Read messages from channel
+- ❌ Access other channels
+- ❌ Modify server settings
+- ❌ Access user data
+- ❌ Delete messages
+
+**Risk Assessment:**
+- **Low risk**: Webhook only sends messages
+- **Damage potential**: Spam in one channel (annoying, not critical)
+- **Mitigation**: Regenerate webhook in Discord if compromised
+- **Recovery time**: < 5 minutes to regenerate
+
+### Monitoring & Maintenance
+
+**What to monitor:**
+1. **Discord rate limit errors**: Check server logs for 429 responses
+2. **Spam patterns**: Unusual spike in notifications
+3. **False positives**: Rate limiting legitimate users
+
+**When to regenerate webhook:**
+- Webhook URL accidentally exposed
+- Suspicious notification patterns
+- Security audit recommendation
+- Every 6 months (proactive rotation)
+
+**How to regenerate webhook:**
+1. Go to Discord Server Settings
+2. Integrations > Webhooks
+3. Delete old webhook
+4. Create new webhook
+5. Update 1Password item
+6. Update Vercel environment variable
+7. Test with preview deployment
+
+### Notification Examples
+
+**Page Visit:**
+```
+Title: 👀 New Page Visit
+Description: Someone visited **/pricing**
+Fields:
+  - Referrer: https://google.com
+  - User Agent: Mozilla/5.0...
+Color: #0B6E4F (SV green)
+```
+
+**Form Submission:**
+```
+Title: ✉️ New Form Submission
+Description: **New contact from website form!**
+Fields:
+  - Email: example@company.com
+  - Name: John Doe
+  - Company: ACME Corp
+  - Phone: +51 999 999 999
+Color: #00FF00 (Green)
+```
+
+### Known Limitations
+
+1. **In-memory rate limiting**: Resets on server restart (Vercel cold starts)
+   - **Fix**: Upgrade to Redis for production
+2. **No bot detection**: Tracks all visits including crawlers
+   - **Fix**: Add user agent filtering if needed
+3. **No geographic data**: Only tracks IP, not location
+   - **Fix**: Add geo-IP lookup if needed
+4. **Discord rate limits**: 30 messages/min per webhook
+   - **Current usage**: Well below limit with rate limiting
+
+### Future Enhancements (Optional)
+
+- ⏳ Add Redis for persistent rate limiting
+- ⏳ Add bot detection (filter crawlers, prefetch)
+- ⏳ Add geographic tracking (IP → country/city)
+- ⏳ Add notification batching (group multiple visits)
+- ⏳ Add daily/weekly summary reports
+- ⏳ Add custom Discord embed colors per event type
+- ⏳ Add silence mode (disable notifications for testing)
 
 ---

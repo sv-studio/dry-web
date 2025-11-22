@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead } from '@/components/text'
+import { VisitorTracker } from '@/components/visitor-tracker'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
@@ -180,6 +181,7 @@ function ContactFormSection() {
 export default function ContactForm() {
   return (
     <main className="overflow-hidden">
+      <VisitorTracker page="/form" />
       <GradientBackground />
       <Container>
         <Navbar />

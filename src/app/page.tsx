@@ -4,7 +4,6 @@ import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
-import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
 import { LogoTimeline } from '@/components/logo-timeline'
@@ -28,10 +27,10 @@ function Hero() {
         <Navbar />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            De la idea a la app en un instante.
+            La forma más rápida de pasar de idea a producto
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Construye con IA que entiende tu negocio.
+            Lanza tu MVP en semanas, no meses. IA que acelera desarrollo, stack moderno que escala, y soporte continuo para crecer.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="/form">Comenzar</Button>
@@ -131,16 +130,12 @@ function DarkBentoSection() {
           Automatizamos y digitalizamos los procesos más críticos de tu empresa
         </Heading>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6">
           <BentoCard
             dark
             eyebrow="Desarrollo Web"
             title="Aplicaciones web modernas"
             description="Desde landing pages hasta sistemas complejos con integración a bases de datos. Construimos con Next.js, Astro, React y Tailwind CSS."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
             className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
           />
           <BentoCard
@@ -157,7 +152,6 @@ function DarkBentoSection() {
             eyebrow="Soporte"
             title="Acompañamiento cercano"
             description="Trabajamos de la mano, uno a uno. Mejoramos tu proyecto continuamente, corregimos errores, optimizamos rendimiento y gestionamos tus pagos de forma segura."
-            graphic={<LinkedAvatars />}
             className="lg:col-span-2 lg:rounded-bl-4xl"
           />
           <BentoCard
@@ -165,10 +159,6 @@ function DarkBentoSection() {
             eyebrow="Capacitaciones"
             title="Potencia a tu equipo con IA"
             description="Capacitamos a tu equipo en Claude Code para diseñar y desarrollar productos web y app 10 veces más rápido, además de optimizar las operaciones de tu empresa con IA."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
             className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
           />
         </div>

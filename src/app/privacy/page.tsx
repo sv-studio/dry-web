@@ -6,8 +6,8 @@ import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Learn how SV collects, uses, and protects your personal information.',
+  title: 'Política de Privacidad',
+  description: 'Conoce cómo SV recopila, usa y protege tu información personal.',
 }
 
 export default function Privacy() {
@@ -18,136 +18,140 @@ export default function Privacy() {
         <Navbar />
       </Container>
       <Container className="mt-16">
-        <Heading as="h1">Privacy Policy</Heading>
+        <Heading as="h1">Política de Privacidad</Heading>
         <Lead className="mt-6">
-          Last updated: November 18, 2024
+          Última actualización: 22 de noviembre de 2024
         </Lead>
 
         <div className="prose prose-gray mt-10 max-w-3xl">
           <Subheading as="h2" className="mt-12">
-            1. Introduction
+            1. Introducción
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            SV (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website dry.pe and use our services.
+            SV (&quot;nosotros,&quot; &quot;nuestro,&quot; o &quot;nos&quot;) está comprometido con proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web dry.pe y usas nuestros servicios.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            2. Information We Collect
+            2. Información que Recopilamos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We collect information that you provide directly to us, including:
+            Recopilamos información que nos proporcionas directamente, incluyendo:
           </p>
           <ul className="mt-4 list-disc pl-6 text-sm/6 text-gray-600">
-            <li>Contact information (name, email address, phone number)</li>
-            <li>Company name and business information</li>
-            <li>Communications you send to us</li>
-            <li>Any other information you choose to provide</li>
+            <li>Información de contacto (nombre, correo electrónico, número de teléfono)</li>
+            <li>Nombre de empresa e información de negocio</li>
+            <li>Comunicaciones que nos envías</li>
+            <li>Cualquier otra información que elijas proporcionar</li>
           </ul>
 
           <Subheading as="h2" className="mt-12">
-            3. How We Use Your Information
+            3. Cómo Usamos Tu Información
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We use the information we collect to:
+            Usamos la información que recopilamos para:
           </p>
           <ul className="mt-4 list-disc pl-6 text-sm/6 text-gray-600">
-            <li>Respond to your inquiries and provide customer support</li>
-            <li>Process and manage your requests for our services</li>
-            <li>Send you updates about our services (with your consent)</li>
-            <li>Improve our website and services</li>
-            <li>Comply with legal obligations</li>
+            <li>Responder a tus consultas y proporcionar soporte al cliente</li>
+            <li>Procesar y gestionar tus solicitudes de nuestros servicios</li>
+            <li>Enviarte actualizaciones sobre nuestros servicios (con tu consentimiento)</li>
+            <li>Mejorar nuestro sitio web y servicios</li>
+            <li>Cumplir con obligaciones legales</li>
           </ul>
 
           <Subheading as="h2" className="mt-12">
-            4. Data Storage and Third-Party Services
+            4. Almacenamiento de Datos y Servicios de Terceros
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We use Airtable, a third-party service, to store and manage contact form submissions. When you submit a contact form on our website, your information is securely transmitted to and stored in Airtable. Airtable&apos;s use of your information is governed by their privacy policy.
+            Usamos Airtable, un servicio de terceros, para almacenar y gestionar las solicitudes del formulario de contacto. Cuando envías un formulario de contacto en nuestro sitio web, tu información se transmite de forma segura y se almacena en Airtable. El uso que Airtable hace de tu información se rige por su política de privacidad.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            5. Information Sharing and Disclosure
+            5. Compartir y Divulgar Información
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
+            No vendemos, intercambiamos ni alquilamos tu información personal a terceros. Podemos compartir tu información solo en las siguientes circunstancias:
           </p>
           <ul className="mt-4 list-disc pl-6 text-sm/6 text-gray-600">
-            <li>With service providers who assist us in operating our website and providing our services (such as Airtable)</li>
-            <li>When required by law or to respond to legal process</li>
-            <li>To protect our rights, property, or safety, or that of our users or the public</li>
-            <li>With your consent or at your direction</li>
+            <li>Con proveedores de servicios que nos ayudan a operar nuestro sitio web y proporcionar nuestros servicios (como Airtable)</li>
+            <li>Cuando lo requiera la ley o para responder a procesos legales</li>
+            <li>Para proteger nuestros derechos, propiedad o seguridad, o los de nuestros usuarios o el público</li>
+            <li>Con tu consentimiento o bajo tu dirección</li>
           </ul>
 
           <Subheading as="h2" className="mt-12">
-            6. Data Security
+            6. Seguridad de Datos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+            Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro, y no podemos garantizar seguridad absoluta.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            7. Data Retention
+            7. Retención de Datos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
+            Retenemos tu información personal solo durante el tiempo necesario para cumplir con los propósitos descritos en esta Política de Privacidad, a menos que la ley requiera o permita un período de retención más largo.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            8. Your Rights
+            8. Tus Derechos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            You have the right to:
+            Tienes derecho a:
           </p>
           <ul className="mt-4 list-disc pl-6 text-sm/6 text-gray-600">
-            <li>Access the personal information we hold about you</li>
-            <li>Request correction of inaccurate or incomplete information</li>
-            <li>Request deletion of your personal information</li>
-            <li>Object to or restrict the processing of your information</li>
-            <li>Withdraw consent at any time (where processing is based on consent)</li>
+            <li>Acceder a la información personal que tenemos sobre ti</li>
+            <li>Solicitar la corrección de información inexacta o incompleta</li>
+            <li>Solicitar la eliminación de tu información personal</li>
+            <li>Oponerte o restringir el procesamiento de tu información</li>
+            <li>Retirar el consentimiento en cualquier momento (cuando el procesamiento se base en consentimiento)</li>
           </ul>
           <p className="mt-4 text-sm/6 text-gray-600">
-            To exercise any of these rights, please contact us using the information provided at the end of this policy.
+            Para ejercer cualquiera de estos derechos, contáctanos usando la información proporcionada al final de esta política.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            9. Cookies and Tracking Technologies
+            9. Cookies y Tecnologías de Seguimiento
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            Our website may use cookies and similar tracking technologies to enhance your browsing experience. You can control cookies through your browser settings. Note that disabling cookies may affect the functionality of our website.
+            Nuestro sitio web puede usar cookies y tecnologías de seguimiento similares para mejorar tu experiencia de navegación. Puedes controlar las cookies a través de la configuración de tu navegador. Ten en cuenta que deshabilitar las cookies puede afectar la funcionalidad de nuestro sitio web.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            10. Children&apos;s Privacy
+            10. Privacidad de Menores
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you become aware that a child has provided us with personal information, please contact us.
+            Nuestros servicios no están dirigidos a personas menores de 18 años. No recopilamos intencionalmente información personal de menores. Si te das cuenta de que un menor nos ha proporcionado información personal, por favor contáctanos.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            11. International Data Transfers
+            11. Transferencias Internacionales de Datos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country. We take appropriate safeguards to ensure that your personal information remains protected.
+            Tu información puede ser transferida y procesada en países distintos a tu país de residencia. Estos países pueden tener leyes de protección de datos diferentes a las leyes de tu país. Tomamos las medidas apropiadas para garantizar que tu información personal permanezca protegida.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            12. Changes to This Privacy Policy
+            12. Cambios a Esta Política de Privacidad
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. Your continued use of our services after any changes indicates your acceptance of the updated policy.
+            Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de &quot;Última actualización&quot;. Tu uso continuado de nuestros servicios después de dichos cambios indica tu aceptación de la política actualizada.
           </p>
 
           <Subheading as="h2" className="mt-12">
-            13. Contact Us
+            13. Contáctanos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            If you have any questions about this Privacy Policy or our privacy practices, please contact us:
+            Si tienes alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de privacidad, contáctanos:
           </p>
           <p className="mt-2 text-sm/6 text-gray-600">
-            SV<br />
-            Lima, Peru<br />
+            <strong>Nombre comercial:</strong> DRY<br />
+            <strong>Razón social:</strong> SV Tecnología y Contenido<br />
+            Lima, Perú<br />
             Email: vicuna@hey.com<br />
-            Phone: +51 943 891 428
+            Teléfono: +51 943 891 428
+          </p>
+          <p className="mt-4 text-sm/6 text-gray-600 text-xs">
+            * Para efectos de facturación y trámites ante la SUNAT, la empresa está registrada como &quot;SV Tecnología y Contenido&quot;. El nombre comercial &quot;DRY&quot; se utiliza para fines de marketing y comunicación.
           </p>
         </div>
       </Container>

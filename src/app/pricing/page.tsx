@@ -6,6 +6,7 @@ import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
+import { VisitorTracker } from '@/components/visitor-tracker'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,
@@ -24,14 +25,14 @@ const tiers = [
   {
     name: 'Capacitación en IA' as const,
     slug: 'claude-training',
-    description: 'Que tu equipo entregue diseño o software 10x más rápido a tus clientes',
+    description: 'Haz que tu equipo diseñe y desarrolle 10× más rápido con IA',
     priceMonthly: 500,
     href: '/form',
     highlights: [
       { description: 'Workshop 1-2 días (3h/día)' },
       { description: 'Hasta 15 personas por sesión' },
       { description: 'Práctica con proyectos reales' },
-      { description: 'Setup e instalación incluidos' },
+      { description: (<>Setup e instalación de{' '}<a href="https://www.claude.com/product/claude-code" target="_blank" rel="noopener noreferrer" className="inline underline hover:text-gray-950">Claude Code</a></>) },
       { description: 'Mejores prácticas y workflows' },
       { description: 'Plan de adopción personalizado' },
     ],
@@ -53,15 +54,15 @@ const tiers = [
   {
     name: 'Desarrollo Web' as const,
     slug: 'web-package',
-    description: 'Sitio web profesional con diseño responsive, integraciones y hosting incluido',
+    description: 'De idea a producto en semanas. Diseño, desarrollo, deployment y soporte incluidos.',
     priceMonthly: 250,
     href: '/form',
     highlights: [
       { description: 'Diseño responsive mobile-first' },
       { description: 'Formularios de contacto + SEO' },
       { description: 'CMS para editar contenido fácilmente' },
-      { description: 'Hosting Vercel y dominio ($8-20/mes)' },
-      { description: 'Integración Airtable' },
+      { description: (<>Hosting{' '}<a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="inline underline hover:text-gray-950">Vercel</a>{' '}y dominio ($8-20/mes)</>) },
+      { description: (<>Integración{' '}<a href="https://airtable.com" target="_blank" rel="noopener noreferrer" className="inline underline hover:text-gray-950">Airtable</a></>) },
       { description: 'API personalizada y webhooks' },
     ],
     features: [
@@ -82,7 +83,7 @@ const tiers = [
   {
     name: 'Servicios Personalizados' as const,
     slug: 'tailored',
-    description: 'Soluciones a medida combinando capacitación y desarrollo',
+    description: 'Soluciones enterprise que escalan. Capacitación, desarrollo y soporte dedicado.',
     priceMonthly: null,
     href: '/form',
     highlights: [
@@ -113,9 +114,9 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Servicios para la era de la IA</Heading>
+      <Heading as="h1">Invierte en velocidad</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Desde capacitación en IA hasta desarrollo web completo, ayudamos a equipos a construir mejor software más rápido.
+        Capacitación en IA, desarrollo web y soluciones a medida. Pricing transparente, sin sorpresas.
       </Lead>
     </Container>
   )
@@ -350,7 +351,7 @@ function FeatureItem({
   description,
   disabled = false,
 }: {
-  description: string
+  description: React.ReactNode
   disabled?: boolean
 }) {
   return (
@@ -397,7 +398,7 @@ function Testimonial() {
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
                 <p className="relative text-3xl tracking-tight text-white lg:text-4xl">
-                  &quot;DRY entregó nuestra Airtable a tiempo y dentro del presupuesto. Su modelo de precio fijo nos dio la certeza que necesitábamos.&quot;
+                  &quot;SV entregó nuestra Airtable a tiempo y dentro del presupuesto. Su modelo de precio fijo nos dio la certeza que necesitábamos.&quot;
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
@@ -426,62 +427,118 @@ function FrequentlyAskedQuestions() {
         <Heading as="div" className="mt-2 text-center">
           Tus dudas resueltas
         </Heading>
-        <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
-          <dl>
-            <dt className="text-sm font-semibold">
-              ¿Qué incluye el precio fijo?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Cada paquete incluye todo lo listado: diseño, desarrollo, pruebas,
-              despliegue y las rondas de revisión especificadas. Los únicos costos
-              adicionales serían por servicios de terceros que elijas (como hosting
-              o APIs premium), los cuales discutiremos desde el inicio.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              ¿Cómo funciona el timeline del proyecto?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Los tiempos son estimados basados en proyectos típicos de cada paquete.
-              Después de nuestra consulta inicial, proporcionaremos un plan detallado
-              con hitos. Trabajamos en sprints iterativos y compartimos actualizaciones
-              de progreso semanalmente.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              ¿Qué pasa si mi proyecto no encaja en estos paquetes?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Estos paquetes cubren la mayoría de proyectos, pero somos flexibles.
-              Si tus necesidades son únicas, contáctanos para una cotización personalizada.
-              También podemos comenzar con una sesión de consultoría para definir el
-              alcance y enfoque correcto.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              ¿Qué tipo de soporte ofrecen después del lanzamiento?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Cada paquete incluye soporte post-lanzamiento (30 días a 6 meses según
-              el paquete). Esto cubre corrección de errores, ajustes menores y soporte
-              técnico. Después de ese período, podemos acordar mantenimiento continuo
-              mediante un retainer mensual o por solicitud.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              ¿Trabajan con clientes fuera de Perú?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Por supuesto. Trabajamos con clientes globalmente y tenemos experiencia
-              en colaboración remota. Adaptamos nuestro horario de comunicación a tu
-              zona horaria y usamos herramientas como Slack, Zoom y plataformas de
-              gestión de proyectos para mantener todo transparente y organizado.
-            </dd>
-          </dl>
+
+        <div className="mx-auto mt-16 mb-32 max-w-5xl">
+          {/* Capacitación en IA */}
+          <div className="pb-16 border-b border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-950 mb-8">Capacitación en IA</h3>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Qué herramientas aprenderemos en la capacitación?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Claude Code es la herramienta principal. Aprenderán a diseñar interfaces, escribir código,
+                  integrar APIs y automatizar flujos de trabajo. Todo desde una interfaz conversacional que
+                  acelera el desarrollo 10× comparado con métodos tradicionales.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Mi equipo necesita experiencia previa en IA?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  No. La capacitación está diseñada para equipos sin experiencia en IA. Si tu equipo sabe
+                  usar computadoras y entiende su negocio, pueden aprender. Cubrimos desde lo básico hasta
+                  casos de uso aplicados a su industria específica.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Cuánto tiempo toma ver resultados después del workshop?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Resultados inmediatos. Durante el workshop crearán proyectos reales. Después, esperamos
+                  que tu equipo empiece a usar estas herramientas el mismo día. La mayoría de equipos reportan
+                  mejoras en productividad en la primera semana.
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          {/* Desarrollo Web */}
+          <div className="py-16 border-b border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-950 mb-8">Desarrollo Web</h3>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Puedo hacer cambios al contenido yo mismo después?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Sí. Incluimos un sistema de gestión de contenido (CMS) donde puedes editar textos,
+                  imágenes y páginas sin tocar código. Te damos una sesión de capacitación para que tu
+                  equipo pueda hacer actualizaciones de forma autónoma.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿El sitio funciona en móviles y tablets?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Sí, diseño mobile-first. Esto significa que diseñamos primero para móviles y luego
+                  adaptamos a pantallas más grandes. Tu sitio se verá bien en cualquier dispositivo:
+                  celulares, tablets, laptops y monitores de escritorio.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Qué pasa si necesito más páginas después del lanzamiento?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Podemos agregar páginas nuevas en cualquier momento. Si tienes un plan de mantenimiento,
+                  páginas simples están incluidas. Para páginas con funcionalidad compleja, cotizamos por
+                  separado. El costo depende de la complejidad y features necesarias.
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          {/* Servicios Personalizados */}
+          <div className="pt-16">
+            <h3 className="text-lg font-semibold text-gray-950 mb-8">Servicios Personalizados</h3>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Cómo funciona el pricing en servicios personalizados?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Precio fijo por proyecto o retainer mensual, según prefieras. Primero hacemos una sesión
+                  para entender alcance y complejidad. Luego enviamos una propuesta con precio cerrado y
+                  entregables claros. Sin costos ocultos ni sorpresas.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Pueden integrarse con nuestros sistemas existentes?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Sí. Nos conectamos con CRMs, ERPs, bases de datos, APIs de terceros y cualquier sistema
+                  que tenga documentación técnica. Si tu sistema tiene una API o permite integraciones,
+                  podemos conectarnos. Si no, evaluamos alternativas.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold">
+                  ¿Ofrecen soporte dedicado a largo plazo?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Sí, incluye account manager dedicado, sesiones de estrategia trimestrales y respuesta
+                  prioritaria. Es ideal para empresas que necesitan evolucionar su producto constantemente
+                  o tienen requisitos de uptime y seguridad elevados.
+                </dd>
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
     </Container>
@@ -501,6 +558,7 @@ export default async function Pricing({
 
   return (
     <main className="overflow-hidden">
+      <VisitorTracker page="/pricing" />
       <GradientBackground />
       <Container>
         <Navbar />

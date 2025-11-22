@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Airtable from 'airtable'
+import {
+  createFormSubmissionEmbed,
+  sendDiscordNotification,
+} from '@/lib/discord'
 
 export async function POST(request: NextRequest) {
   try {
@@ -84,6 +88,26 @@ export async function POST(request: NextRequest) {
 
     // Save contact to Airtable
     await contactsTable.create(contactRecord)
+
+    // Send Discord notification (non-blocking)
+    // If Discord fails, form submission still succeeds
+    const clientIp =
+      request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+      request.headers.get('x-real-ip') ||
+      'unknown'
+
+    const discordEmbed = createFormSubmissionEmbed(
+      email,
+      contact_name,
+      company || undefined,
+      phone_number || undefined,
+    )
+
+    // Send notification asynchronously (don't wait for it)
+    sendDiscordNotification(discordEmbed, clientIp).catch((error) => {
+      // Log error but don't fail the request
+      console.error('Failed to send Discord notification:', error)
+    })
 
     // Return success response
     return NextResponse.json(
