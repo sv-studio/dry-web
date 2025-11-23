@@ -1,5 +1,6 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className="text-gray-950 antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )
