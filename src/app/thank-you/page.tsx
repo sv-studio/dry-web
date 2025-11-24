@@ -7,8 +7,8 @@ import { Heading, Lead } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Thank You',
-  description: 'Thank you for contacting SV. We\'ll be in touch soon.',
+  title: 'Gracias',
+  description: 'Gracias por contactar a DRY. Nos pondremos en contacto contigo pronto.',
 }
 
 export default function ThankYou() {

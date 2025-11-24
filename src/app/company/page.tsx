@@ -8,9 +8,9 @@ import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Company',
+  title: 'Nosotros',
   description:
-    'Learn about SV, our mission to deliver quality software solutions, and the team behind your next project.',
+    'Conoce a DRY, nuestra misión de entregar soluciones de software de calidad, y el equipo detrás de tu próximo proyecto.',
 }
 
 function Header() {

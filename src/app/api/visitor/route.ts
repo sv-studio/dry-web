@@ -16,6 +16,32 @@ import { createVisitEmbed, sendDiscordNotification } from '@/lib/discord'
 const ALLOWED_PAGES = ['/pricing', '/form']
 
 /**
+ * Check if user agent is a known bot/crawler
+ */
+function isBot(userAgent: string | null): boolean {
+  if (!userAgent) return false
+
+  const botPatterns = [
+    /bot/i,
+    /crawler/i,
+    /spider/i,
+    /googlebot/i,
+    /bingbot/i,
+    /slurp/i,
+    /duckduckbot/i,
+    /baiduspider/i,
+    /yandexbot/i,
+    /facebookexternalhit/i,
+    /twitterbot/i,
+    /linkedinbot/i,
+    /whatsapp/i,
+    /telegrambot/i,
+  ]
+
+  return botPatterns.some((pattern) => pattern.test(userAgent))
+}
+
+/**
  * Get client IP from request
  */
 function getClientIp(request: NextRequest): string {
@@ -44,6 +70,8 @@ function isValidOrigin(request: NextRequest): boolean {
   // Allow requests from same domain or localhost (development)
   const allowedOrigins = [
     process.env.NEXT_PUBLIC_SITE_URL,
+    'https://dry.pe',
+    'https://www.dry.pe',
     'http://localhost:3000',
     'http://localhost:3001',
     'http://192.168.68.106:3000',
@@ -93,6 +121,11 @@ export async function POST(request: NextRequest) {
 
     // 5. Get user agent
     const userAgent = request.headers.get('user-agent') || undefined
+
+    // 5.5. Filter out bots (optional - uncomment to enable)
+    // if (isBot(userAgent || null)) {
+    //   return NextResponse.json({ success: true, filtered: 'bot' }, { status: 200 })
+    // }
 
     // 6. Create embed
     const embed = createVisitEmbed(page, referrer, userAgent)

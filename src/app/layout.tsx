@@ -4,8 +4,8 @@ import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - SV',
-    default: 'SV - Software Services',
+    template: '%s - DRY',
+    default: 'DRY - Servicios de Software',
   },
 }
 

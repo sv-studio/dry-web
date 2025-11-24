@@ -15,8 +15,9 @@ import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'DRY - Servicios de Software',
   description:
-    'SV transforma tus ideas en soluciones de software listas para producción. Servicios expertos de desarrollo de software en Lima, Perú.',
+    'DRY transforma tus ideas en soluciones de software listas para producción. Servicios expertos de desarrollo de software en Lima, Perú.',
 }
 
 function Hero() {
