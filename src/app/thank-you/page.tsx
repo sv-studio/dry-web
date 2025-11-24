@@ -20,15 +20,15 @@ export default function ThankYou() {
       </Container>
       <Container className="mt-16">
         <div className="mx-auto max-w-2xl text-center">
-          <Heading as="h1">Thank you for reaching out!</Heading>
+          <Heading as="h1">¡Gracias por contactarnos!</Heading>
           <Lead className="mt-6">
-            We&apos;ve received your message and will get back to you shortly.
-            We typically respond within 24 hours.
+            Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.
+            Normalmente respondemos en 24 horas.
           </Lead>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button href="/">Back to home</Button>
+            <Button href="/">Volver al inicio</Button>
             <Button variant="secondary" href="/pricing">
-              View pricing
+              Ver precios
             </Button>
           </div>
         </div>
