@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Términos de Servicio',
-  description: 'Términos y condiciones para usar los servicios de desarrollo de software de SV.',
+  description: 'Términos y condiciones para usar los servicios de desarrollo de software de DRY.',
 }
 
 export default function Terms() {

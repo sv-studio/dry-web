@@ -7,8 +7,8 @@ import { Heading, Lead } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Gracias',
-  description: 'Gracias por contactar a DRY. Nos pondremos en contacto contigo pronto.',
+  title: 'Gracias por contactarnos',
+  description: 'Hemos recibido tu mensaje. Nuestro equipo revisará tu solicitud y te responderá en menos de 24 horas. DRY - Servicios de desarrollo de software en Perú.',
 }
 
 export default function ThankYou() {

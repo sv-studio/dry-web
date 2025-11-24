@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
-  description: 'Conoce cómo SV recopila, usa y protege tu información personal.',
+  description: 'Conoce cómo DRY recopila, usa y protege tu información personal.',
 }
 
 export default function Privacy() {
