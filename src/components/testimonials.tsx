@@ -21,16 +21,16 @@ const testimonials = [
   {
     img: '/testimonials/adriana.jpg',
     name: 'Adriana Suárez',
-    title: 'Founder, SV',
+    title: 'Founder, DRY',
     quote:
-      'Mi pasión es transformar ideas en productos reales que generen impacto. Fundé SV para ayudar a emprendedores a materializar su visión sin las barreras técnicas que yo enfrenté al comenzar.',
+      'Mi pasión es transformar ideas en productos reales que generen impacto. Fundé DRY para ayudar a emprendedores a materializar su visión sin las barreras técnicas que yo enfrenté al comenzar.',
   },
   {
     img: '/testimonials/jorge.jpg',
     name: 'Jorge Vicuña',
-    title: 'CTO, SV',
+    title: 'CTO, DRY',
     quote:
-      'Me apasiona construir software que no solo funciona, sino que escala y evoluciona. En SV, combinamos las mejores tecnologías con código limpio para entregar soluciones que perduran.',
+      'Me apasiona construir software que no solo funciona, sino que escala y evoluciona. En DRY, combinamos las mejores tecnologías con código limpio para entregar soluciones que perduran.',
   },
 ]
 
@@ -129,7 +129,7 @@ function CallToAction() {
   return (
     <div>
       <p className="max-w-sm text-sm/6 text-gray-600">
-        Únete a empresas exitosas que confían en SV para construir sus soluciones de software.
+        Únete a empresas exitosas que confían en DRY para construir sus soluciones de software.
       </p>
       <div className="mt-2">
         <Link

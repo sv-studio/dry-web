@@ -28,7 +28,7 @@ export default function Privacy() {
             1. Introducción
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            SV (&quot;nosotros,&quot; &quot;nuestro,&quot; o &quot;nos&quot;) está comprometido con proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web dry.pe y usas nuestros servicios.
+            DRY (&quot;nosotros,&quot; &quot;nuestro,&quot; o &quot;nos&quot;) está comprometido con proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web dry.pe y usas nuestros servicios.
           </p>
 
           <Subheading as="h2" className="mt-12">

@@ -28,14 +28,14 @@ export default function Terms() {
             1. Aceptación de Términos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            Al acceder y usar el sitio web de SV (dry.pe) y sus servicios, aceptas y te comprometes a cumplir con los términos y condiciones de este acuerdo. Si no estás de acuerdo con estos términos, por favor no uses nuestros servicios.
+            Al acceder y usar el sitio web de DRY (dry.pe) y sus servicios, aceptas y te comprometes a cumplir con los términos y condiciones de este acuerdo. Si no estás de acuerdo con estos términos, por favor no uses nuestros servicios.
           </p>
 
           <Subheading as="h2" className="mt-12">
             2. Servicios
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            SV ofrece tres servicios principales:
+            DRY ofrece tres servicios principales:
           </p>
           <ul className="mt-4 space-y-2 text-sm/6 text-gray-600">
             <li><strong>Capacitación en IA</strong> - Workshops de entrenamiento para que equipos diseñen y desarrollen 10× más rápido usando herramientas de IA como Claude Code. Incluye talleres de 1-2 días, práctica hands-on y plan de adopción.</li>
@@ -57,7 +57,7 @@ export default function Terms() {
             4. Propiedad Intelectual
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            A menos que se especifique lo contrario en un acuerdo de proyecto, todos los derechos de propiedad intelectual sobre cualquier software, documentación o materiales desarrollados por SV permanecen como propiedad de SV hasta que se reciba el pago completo. Una vez recibido el pago completo, los derechos de propiedad se transferirán al cliente según lo especificado en el acuerdo de proyecto.
+            A menos que se especifique lo contrario en un acuerdo de proyecto, todos los derechos de propiedad intelectual sobre cualquier software, documentación o materiales desarrollados por DRY permanecen como propiedad de DRY hasta que se reciba el pago completo. Una vez recibido el pago completo, los derechos de propiedad se transferirán al cliente según lo especificado en el acuerdo de proyecto.
           </p>
 
           <Subheading as="h2" className="mt-12">
@@ -89,7 +89,7 @@ export default function Terms() {
             7. Términos de Pago
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            SV ofrece paquetes de precio fijo con pricing transparente:
+            DRY ofrece paquetes de precio fijo con pricing transparente:
           </p>
           <ul className="mt-4 space-y-2 text-sm/6 text-gray-600">
             <li><strong>Capacitación en IA:</strong> $500 USD por equipo (hasta 15 personas)</li>
@@ -104,21 +104,21 @@ export default function Terms() {
             8. Garantías y Exenciones
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            Si bien nos esforzamos por entregar soluciones de software de alta calidad, SV no ofrece garantías expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de propiedad intelectual.
+            Si bien nos esforzamos por entregar soluciones de software de alta calidad, DRY no ofrece garantías expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de propiedad intelectual.
           </p>
 
           <Subheading as="h2" className="mt-12">
             9. Limitación de Responsabilidad
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            En ningún caso SV será responsable por daños (incluidos, entre otros, daños por pérdida de datos o ganancias, o debido a interrupción de negocios) que surjan del uso o la imposibilidad de usar nuestros servicios, incluso si SV o un representante autorizado ha sido notificado oralmente o por escrito de la posibilidad de dicho daño.
+            En ningún caso DRY será responsable por daños (incluidos, entre otros, daños por pérdida de datos o ganancias, o debido a interrupción de negocios) que surjan del uso o la imposibilidad de usar nuestros servicios, incluso si DRY o un representante autorizado ha sido notificado oralmente o por escrito de la posibilidad de dicho daño.
           </p>
 
           <Subheading as="h2" className="mt-12">
             10. Modificaciones a los Términos
           </Subheading>
           <p className="mt-4 text-sm/6 text-gray-600">
-            SV se reserva el derecho de modificar estos términos en cualquier momento. Notificaremos a los usuarios sobre cualquier cambio importante publicando los nuevos términos en esta página con una fecha de revisión actualizada. Tu uso continuado de nuestros servicios después de dichos cambios constituye tu aceptación de los nuevos términos.
+            DRY se reserva el derecho de modificar estos términos en cualquier momento. Notificaremos a los usuarios sobre cualquier cambio importante publicando los nuevos términos en esta página con una fecha de revisión actualizada. Tu uso continuado de nuestros servicios después de dichos cambios constituye tu aceptación de los nuevos términos.
           </p>
 
           <Subheading as="h2" className="mt-12">

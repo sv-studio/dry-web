@@ -4,7 +4,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <img
       src="/logodry.png"
-      alt="SV Logo"
+      alt="DRY Logo"
       className={clsx(className, 'object-contain')}
     />
   )
