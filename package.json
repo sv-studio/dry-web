@@ -11,12 +11,13 @@
   "dependencies": {
     "@headlessui/react": "^2.2.6",
     "@heroicons/react": "^2.2.0",
+    "@upstash/redis": "^1.35.7",
     "@vercel/analytics": "^1.5.0",
     "airtable": "^0.12.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "framer-motion": "^12.23.11",
-    "next": "15.4.4",
+    "next": "^16.0.7",
     "react": "^19",
     "react-dom": "^19",
     "react-use-measure": "^2.1.7"

@@ -1,7 +1,5 @@
 'use client'
 
-import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 import {
   MotionValue,
@@ -11,10 +9,9 @@ import {
   useSpring,
   type HTMLMotionProps,
 } from 'framer-motion'
-import { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import { useCallback, useLayoutEffect, useRef } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from './container'
-import { Link } from './link'
 import { Heading, Subheading } from './text'
 
 const testimonials = [
@@ -125,40 +122,10 @@ function TestimonialCard({
   )
 }
 
-function CallToAction() {
-  return (
-    <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
-        Únete a empresas exitosas que confían en DRY para construir sus soluciones de software.
-      </p>
-      <div className="mt-2">
-        <Link
-          href="/form"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
-        >
-          Comenzar
-          <ArrowLongRightIcon className="size-5" />
-        </Link>
-      </div>
-    </div>
-  )
-}
-
 export function Testimonials() {
   let scrollRef = useRef<HTMLDivElement | null>(null)
   let { scrollX } = useScroll({ container: scrollRef })
   let [setReferenceWindowRef, bounds] = useMeasure()
-  let [activeIndex, setActiveIndex] = useState(0)
-
-  useMotionValueEvent(scrollX, 'change', (x) => {
-    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
-  })
-
-  function scrollTo(index: number) {
-    let gap = 32
-    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth
-    scrollRef.current!.scrollTo({ left: (width + gap) * index })
-  }
 
   return (
     <div className="overflow-hidden py-32">

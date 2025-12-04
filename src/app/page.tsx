@@ -1,4 +1,5 @@
 import { BentoCard } from '@/components/bento-card'
+// BentoSection removed - using DarkBentoSection only
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
@@ -7,7 +8,6 @@ import { Keyboard } from '@/components/keyboard'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
 import { LogoTimeline } from '@/components/logo-timeline'
-import { Map } from '@/components/map'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
@@ -60,65 +60,6 @@ function FeatureSection() {
         />
       </Container>
     </div>
-  )
-}
-
-function BentoSection() {
-  return (
-    <Container>
-      <Subheading>Desarrollo</Subheading>
-      <Heading as="h3" className="mt-2 max-w-3xl">
-        Tecnología moderna para impulsar tu negocio.
-      </Heading>
-
-      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-        <BentoCard
-          eyebrow="Soluciones"
-          title="Desarrollo web completo"
-          description="Creamos sitios web modernos y responsivos con Next.js, Tailwind CSS y las mejores prácticas de la industria."
-          graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
-          }
-          fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
-        />
-        <BentoCard
-          eyebrow="Integración"
-          title="APIs y bases de datos"
-          description="Conectamos tu aplicación con Airtable, PostgreSQL y servicios externos mediante APIs robustas y seguras."
-          graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat" />
-          }
-          fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
-        />
-        <BentoCard
-          eyebrow="Velocidad"
-          title="Entrega rápida"
-          description="Proyectos completos en 2-3 semanas con entregas iterativas para que veas el progreso constantemente."
-          graphic={
-            <div className="flex size-full pt-10 pl-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
-            </div>
-          }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
-        />
-        <BentoCard
-          eyebrow="Stack"
-          title="Tecnologías modernas"
-          description="Trabajamos con React, Next.js, TypeScript, Tailwind CSS y las herramientas más actuales del mercado."
-          graphic={<LogoCluster />}
-          className="lg:col-span-2"
-        />
-        <BentoCard
-          eyebrow="Alcance"
-          title="Presencia global"
-          description="Desde Lima, Perú, servimos a clientes en toda Latinoamérica y el mundo con soluciones personalizadas."
-          graphic={<Map />}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
-        />
-      </div>
-    </Container>
   )
 }
 

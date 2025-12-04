@@ -2,6 +2,7 @@ import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { AnalyticsWrapper } from '@/components/analytics-wrapper'
 import { DevModeToggle } from '@/components/dev-mode-toggle'
+import { PresenceTracker } from '@/components/presence-tracker'
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export default function RootLayout({
         {children}
         <AnalyticsWrapper />
         <DevModeToggle />
+        <PresenceTracker />
       </body>
     </html>
   )

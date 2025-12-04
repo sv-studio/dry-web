@@ -146,44 +146,6 @@ export async function sendDiscordNotification(
 }
 
 /**
- * Create embed for page visit
- */
-export function createVisitEmbed(
-  page: string,
-  referrer?: string,
-  userAgent?: string,
-): DiscordEmbed {
-  const fields = []
-
-  if (referrer && referrer !== '') {
-    fields.push({
-      name: 'Referrer',
-      value: referrer,
-      inline: true,
-    })
-  }
-
-  if (userAgent) {
-    // Truncate user agent to avoid huge messages
-    const truncatedUA = userAgent.length > 100
-      ? userAgent.substring(0, 100) + '...'
-      : userAgent
-    fields.push({
-      name: 'User Agent',
-      value: truncatedUA,
-      inline: false,
-    })
-  }
-
-  return {
-    title: '👀 New Page Visit',
-    description: `Someone visited **${page}**`,
-    color: 0x0b6e4f, // SV green color
-    fields,
-  }
-}
-
-/**
  * Create embed for form submission
  */
 export function createFormSubmissionEmbed(

@@ -22,9 +22,8 @@ export function Screenshot({
   const handleMouseEnter = async () => {
     try {
       await videoRef.current?.play()
-    } catch (error) {
+    } catch {
       // Autoplay was prevented by browser - this is expected behavior
-      // User will need to click play button manually
       console.log('Autoplay prevented by browser')
     }
   }
