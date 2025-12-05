@@ -34,9 +34,9 @@ export function BentoCard({
       className={clsx(
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
-        'bg-white shadow-xs ring-1 ring-black/5',
-        'data-dark:bg-gray-800 data-dark:ring-white/15',
-        'transition-shadow duration-300 hover:shadow-lg',
+        'bg-white shadow-xs ring-1 ring-gray-200',
+        'data-dark:bg-gray-800 data-dark:ring-accent-primary/20',
+        'transition-shadow duration-300 hover:shadow-lg hover:ring-accent-primary/40',
       )}
     >
       {graphic && (

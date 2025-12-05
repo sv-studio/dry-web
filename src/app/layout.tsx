@@ -16,15 +16,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" style={{ colorScheme: 'light' }}>
+    <html lang="es" style={{ colorScheme: 'dark' }}>
       <head>
-        <meta name="color-scheme" content="light" />
+        <meta name="color-scheme" content="dark" />
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/css?f[]=satoshi@400,500,600,700&f[]=clash-display@500,600,700&display=swap"
         />
       </head>
-      <body className="text-gray-950 antialiased">
+      <body className="bg-white text-gray-950 antialiased">
         {children}
         <Analytics />
         <PresenceTracker />

@@ -117,7 +117,7 @@ function Header() {
 function PricingCards() {
   return (
     <div className="relative py-24">
-      <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+      <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-accent-primary/20 ring-inset" />
       <Container className="relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {tiers.map((tier, tierIndex) => (
@@ -132,18 +132,18 @@ function PricingCards() {
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
-    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#c084fc4d] ring-1 ring-accent-primary/20 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
-        <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+        <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-gray-200">
           <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+          <p className="mt-2 text-sm/6 text-gray-600">{tier.description}</p>
           <div className="mt-8 flex items-center gap-4">
             {tier.priceMonthly ? (
               <>
                 <div className="text-5xl font-medium text-gray-950">
                   ${tier.priceMonthly.toLocaleString()}
                 </div>
-                <div className="text-sm/5 text-gray-950/75">
+                <div className="text-sm/5 text-gray-600">
                   <p>USD</p>
                   {tier.slug === 'web-package' ? <p>desde</p> : <p>por equipo</p>}
                 </div>
@@ -183,10 +183,10 @@ function FeatureItem({
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-disabled:text-gray-950/25"
+      className="flex items-start gap-4 text-sm/6 text-gray-600 data-disabled:text-gray-400"
     >
       <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-3.75 shrink-0 fill-gray-950/25" />
+        <PlusIcon className="size-3.75 shrink-0 fill-accent-primary" />
       </span>
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
@@ -208,7 +208,7 @@ function Testimonial() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
           <div className="-mt-96 lg:-mt-52">
-            <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
+            <div className="-m-2 rounded-4xl bg-accent-primary/15 shadow-[inset_0_0_2px_1px_#c084fc4d] ring-1 ring-accent-primary/20 max-lg:mx-auto max-lg:max-w-xs">
               <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img
@@ -230,7 +230,7 @@ function Testimonial() {
               <figcaption className="mt-auto">
                 <p className="text-sm/6 font-medium text-white">Carelli Taboada</p>
                 <p className="text-sm/6 font-medium">
-                  <span className="bg-linear-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-[#c084fc] from-28% via-[#a78bfa] via-70% to-[#818cf8] bg-clip-text text-transparent">
                     Coordinadora de Ayuda en Acción Perú
                   </span>
                 </p>
@@ -260,7 +260,7 @@ function FrequentlyAskedQuestions() {
             <h3 className="text-lg font-semibold text-gray-950 mb-8">Capacitación en IA</h3>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Qué herramientas aprenderemos en la capacitación?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -270,7 +270,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Mi equipo necesita experiencia previa en IA?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -280,7 +280,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Cuánto tiempo toma ver resultados después del workshop?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -297,7 +297,7 @@ function FrequentlyAskedQuestions() {
             <h3 className="text-lg font-semibold text-gray-950 mb-8">Desarrollo Web</h3>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Puedo hacer cambios al contenido yo mismo después?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -307,7 +307,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿El sitio funciona en móviles y tablets?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -317,7 +317,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Qué pasa si necesito más páginas después del lanzamiento?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -334,7 +334,7 @@ function FrequentlyAskedQuestions() {
             <h3 className="text-lg font-semibold text-gray-950 mb-8">Servicios Personalizados</h3>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Cómo funciona el pricing en servicios personalizados?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -344,7 +344,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Pueden integrarse con nuestros sistemas existentes?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -354,7 +354,7 @@ function FrequentlyAskedQuestions() {
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-semibold">
+                <dt className="text-sm font-semibold text-gray-950">
                   ¿Ofrecen soporte dedicado a largo plazo?
                 </dt>
                 <dd className="mt-4 text-sm/6 text-gray-600">
@@ -382,7 +382,7 @@ export default function Pricing() {
       <PricingCards />
       <Testimonial />
       <FrequentlyAskedQuestions />
-      <Footer />
+      <Footer minimal />
     </main>
   )
 }

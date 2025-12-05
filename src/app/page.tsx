@@ -23,30 +23,30 @@ export const metadata: Metadata = {
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-accent-primary/20 ring-inset" />
       <Container className="relative">
-        <Navbar />
+        <Navbar dark />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           {/* Eyebrow badge */}
           <div
-            className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-gray-950/5 border border-gray-950/10 opacity-0"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white/20 border border-white/30 opacity-0"
             style={{ animation: 'fadeInDown 0.6s ease-out 0.1s forwards' }}
           >
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
             </span>
-            <span className="text-base font-medium text-gray-700">Software Studio</span>
+            <span className="text-base font-medium text-white">Software Studio</span>
           </div>
 
           <h1
-            className="font-display text-6xl/[0.9] font-semibold tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8] opacity-0"
+            className="font-display text-6xl/[0.9] font-semibold tracking-tight text-balance text-white sm:text-8xl/[0.8] md:text-9xl/[0.8] opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.2s forwards' }}
           >
             Construimos una vez, funciona siempre
           </h1>
           <p
-            className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8 opacity-0"
+            className="mt-8 max-w-lg text-xl/7 font-medium text-white/90 sm:text-2xl/8 opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.4s forwards' }}
           >
             La tecnología hace el trabajo repetitivo. Tú te enfocas en crecer.
@@ -55,25 +55,25 @@ function Hero() {
             className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.6s forwards' }}
           >
-            <Button href="/form">Comenzar proyecto</Button>
-            <Button variant="secondary" href="/pricing">
+            <Button href="/form" className="bg-gray-950 text-white hover:bg-gray-800">Comenzar proyecto</Button>
+            <Button href="/pricing" className="bg-gray-950 text-white hover:bg-gray-800">
               Ver precios
             </Button>
           </div>
 
           {/* Trust indicators */}
           <div
-            className="mt-12 flex items-center gap-8 text-base text-gray-700 opacity-0"
+            className="mt-12 flex items-center gap-8 text-base text-white/80 opacity-0"
             style={{ animation: 'fadeInUp 0.8s ease-out 0.8s forwards' }}
           >
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-gray-950" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <span>Sin costos ocultos</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-gray-950" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
               <span>Entrega en 2-4 semanas</span>
@@ -140,7 +140,7 @@ function DarkBentoSection() {
           className="mt-2 max-w-3xl opacity-0"
           style={{ animation: 'fadeInUp 0.7s ease-out 0.2s forwards' }}
         >
-          Robots para lo aburrido
+          Robots para lo tedioso. Humanos para lo importante.
         </Heading>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6">
@@ -202,7 +202,7 @@ export default function Home() {
         <Container className="mt-10">
           <LogoCloud />
         </Container>
-        <div className="py-32 bg-linear-to-b from-white from-50% to-gray-100">
+        <div className="py-32 bg-linear-to-b from-white from-50% to-gray-50">
           <FeatureSection />
         </div>
         <DarkBentoSection />

@@ -95,7 +95,7 @@ function TestimonialCard({
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-25%"
+        className="absolute inset-0 rounded-3xl bg-linear-to-t from-gray-900 from-[calc(7/16*100%)] ring-1 ring-accent-primary/20 ring-inset sm:from-25%"
       />
       <figure className="relative p-10">
         <blockquote>
@@ -109,10 +109,10 @@ function TestimonialCard({
             </span>
           </p>
         </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
+        <figcaption className="mt-6 border-t border-accent-primary/30 pt-6">
           <p className="text-sm/6 font-medium text-white">{name}</p>
           <p className="text-sm/6 font-medium">
-            <span className="bg-linear-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#c084fc] from-28% via-[#a78bfa] via-70% to-[#818cf8] bg-clip-text text-transparent">
               {title}
             </span>
           </p>

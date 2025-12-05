@@ -1,11 +1,11 @@
 import { clsx } from 'clsx'
 
-export function Logo({ className }: { className?: string }) {
+export function Logo({ className, dark }: { className?: string; dark?: boolean }) {
   return (
     <img
       src="/logodry.png"
       alt="DRY Logo"
-      className={clsx(className, 'object-contain')}
+      className={clsx(className, 'object-contain', dark && 'brightness-0 invert')}
     />
   )
 }

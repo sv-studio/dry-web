@@ -53,7 +53,7 @@ function ContactFormSection() {
         {/* Left column - Form */}
         <div>
           {error && (
-            <div className="mb-6 rounded-lg bg-red-50 p-4 text-sm text-red-800">
+            <div className="mb-6 rounded-lg bg-accent-pink/10 p-4 text-sm text-accent-pink">
               {error}
             </div>
           )}
@@ -70,7 +70,7 @@ function ContactFormSection() {
             required
             disabled={isSubmitting}
             placeholder="tu@email.com"
-            className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-950 placeholder-gray-400 focus:border-accent-primary focus:outline-none focus:ring-1 focus:ring-accent-primary disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -86,7 +86,7 @@ function ContactFormSection() {
             minLength={2}
             disabled={isSubmitting}
             placeholder="Camila Pérez"
-            className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-950 placeholder-gray-400 focus:border-accent-primary focus:outline-none focus:ring-1 focus:ring-accent-primary disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -100,7 +100,7 @@ function ContactFormSection() {
             id="phone_number"
             disabled={isSubmitting}
             placeholder="+51 999 999 999"
-            className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-950 placeholder-gray-400 focus:border-accent-primary focus:outline-none focus:ring-1 focus:ring-accent-primary disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -114,7 +114,7 @@ function ContactFormSection() {
             id="company"
             disabled={isSubmitting}
             placeholder="ACME"
-            className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-950 placeholder-gray-400 focus:border-accent-primary focus:outline-none focus:ring-1 focus:ring-accent-primary disabled:bg-gray-100 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -128,7 +128,7 @@ function ContactFormSection() {
             rows={4}
             disabled={isSubmitting}
             placeholder="Cuéntanos sobre tu proyecto..."
-            className="mt-2 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-950 placeholder-gray-500 focus:border-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-950 disabled:bg-gray-100 disabled:cursor-not-allowed resize-y"
+            className="mt-2 block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-950 placeholder-gray-400 focus:border-accent-primary focus:outline-none focus:ring-1 focus:ring-accent-primary disabled:bg-gray-100 disabled:cursor-not-allowed resize-y"
           />
         </div>
 
@@ -142,29 +142,29 @@ function ContactFormSection() {
 
         {/* Right column - Contact Info */}
         <div className="lg:pl-8">
-          <div className="rounded-2xl bg-gray-50 p-8">
+          <div className="rounded-2xl bg-gray-50 ring-1 ring-gray-200 p-8">
             <h2 className="text-xl font-semibold text-gray-950">Información de contacto</h2>
             <div className="mt-6 space-y-4">
               <div>
-                <p className="text-sm font-medium text-gray-600">Persona de contacto</p>
+                <p className="text-sm font-medium text-gray-500">Persona de contacto</p>
                 <p className="mt-1 text-base font-medium text-gray-950">
                   Adriana Suárez
                 </p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-600">Correo</p>
+                <p className="text-sm font-medium text-gray-500">Correo</p>
                 <a
                   href="mailto:suarezladriana@gmail.com"
-                  className="mt-1 block text-base font-medium text-gray-950 hover:text-gray-600 transition-colors"
+                  className="mt-1 block text-base font-medium text-gray-950 hover:text-accent-primary transition-colors"
                 >
                   suarezladriana@gmail.com
                 </a>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-600">Teléfono</p>
+                <p className="text-sm font-medium text-gray-500">Teléfono</p>
                 <a
                   href="tel:+51963754908"
-                  className="mt-1 block text-base font-medium text-gray-950 hover:text-gray-600 transition-colors"
+                  className="mt-1 block text-base font-medium text-gray-950 hover:text-accent-primary transition-colors"
                 >
                   +51 963 754 908
                 </a>
@@ -186,7 +186,7 @@ export default function ContactForm() {
       </Container>
       <ContactFormSection />
       <div className="mt-24">
-        <Footer />
+        <Footer minimal />
       </div>
     </main>
   )

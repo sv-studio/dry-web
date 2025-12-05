@@ -14,13 +14,7 @@ export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
   return (
-    <div className={clsx(className, 'py-8')}>
-      <p
-        className="text-center text-base font-medium text-gray-500 mb-8 tracking-wide uppercase opacity-0"
-        style={{ animation: 'fadeInUp 0.6s ease-out 0.2s forwards' }}
-      >
-        Clientes
-      </p>
+    <div className={clsx(className, 'py-8 px-4 rounded-2xl bg-white')}>
       <div className="relative overflow-hidden">
         {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />

@@ -21,7 +21,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-gray-500">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -33,7 +33,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-hover:text-gray-950/75"
+        className="font-medium text-gray-950 data-hover:text-accent-primary"
       />
     </li>
   )
@@ -74,7 +74,7 @@ function SocialLinks() {
       href="https://www.linkedin.com/company/dontrepeatyourself/"
       target="_blank"
       aria-label="Visit us on LinkedIn"
-      className="text-gray-950 data-hover:text-gray-950/75"
+      className="text-gray-950 data-hover:text-accent-primary"
     >
       <SocialIconLinkedIn className="size-4" />
     </Link>
@@ -83,17 +83,36 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-950">
+    <div className="text-sm/6 text-gray-500">
       &copy; {new Date().getFullYear()} DRY
     </div>
   )
 }
 
-export function Footer({ showCTA = true }: { showCTA?: boolean }) {
+export function Footer({ showCTA = true, minimal = false }: { showCTA?: boolean; minimal?: boolean }) {
+  if (minimal) {
+    return (
+      <footer className="py-8 border-t border-gray-200">
+        <Container>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <Copyright />
+            <div className="flex items-center gap-6 text-sm text-gray-600">
+              <Link href="/pricing" className="hover:text-accent-primary">Precios</Link>
+              <Link href="/form" className="hover:text-accent-primary">Contacto</Link>
+              <Link href="/terms" className="hover:text-accent-primary">Términos</Link>
+              <Link href="/privacy" className="hover:text-accent-primary">Privacidad</Link>
+              <SocialLinks />
+            </div>
+          </div>
+        </Container>
+      </footer>
+    )
+  }
+
   return (
     <footer>
       <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
+        <div className="absolute inset-2 rounded-4xl bg-white/90" />
         <Container>
           {showCTA && <CallToAction />}
           <PlusGrid className="pb-16">
