@@ -18,16 +18,16 @@ const testimonials = [
   {
     img: '/testimonials/adriana.jpg',
     name: 'Adriana Suárez',
-    title: 'Founder, DRY',
+    title: 'Fundadora',
     quote:
-      'Mi pasión es transformar ideas en productos reales que generen impacto. Fundé DRY para ayudar a emprendedores a materializar su visión sin las barreras técnicas que yo enfrenté al comenzar.',
+      'Creé DRY porque odio ver empresas perdiendo tiempo en tareas que una máquina puede hacer mejor.',
   },
   {
     img: '/testimonials/jorge.jpg',
     name: 'Jorge Vicuña',
-    title: 'CTO, DRY',
+    title: 'Tecnología',
     quote:
-      'Me apasiona construir software que no solo funciona, sino que escala y evoluciona. En DRY, combinamos las mejores tecnologías con código limpio para entregar soluciones que perduran.',
+      'Lo construimos una vez y funciona siempre. Así de simple.',
   },
 ]
 
@@ -131,10 +131,25 @@ export function Testimonials() {
     <div className="overflow-hidden py-32">
       <Container>
         <div ref={setReferenceWindowRef}>
-          <Subheading>Nuestro equipo</Subheading>
-          <Heading as="h3" className="mt-2">
-            Pasión por construir el futuro
+          <div
+            className="opacity-0"
+            style={{ animation: 'fadeInUp 0.6s ease-out 0.1s forwards' }}
+          >
+            <Subheading>Equipo</Subheading>
+          </div>
+          <Heading
+            as="h3"
+            className="mt-2 opacity-0"
+            style={{ animation: 'fadeInUp 0.7s ease-out 0.2s forwards' }}
+          >
+            Quiénes somos
           </Heading>
+          <p
+            className="mt-4 max-w-2xl text-lg text-gray-600 opacity-0"
+            style={{ animation: 'fadeInUp 0.7s ease-out 0.3s forwards' }}
+          >
+            Equipo pequeño, resultados grandes.
+          </p>
         </div>
       </Container>
       <div

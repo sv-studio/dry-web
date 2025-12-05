@@ -12,6 +12,7 @@ export function BentoCard({
   description,
   graphic,
   fade = [],
+  delay = 0,
 }: {
   dark?: boolean
   className?: string
@@ -20,18 +21,22 @@ export function BentoCard({
   description: React.ReactNode
   graphic?: React.ReactNode
   fade?: ('top' | 'bottom')[]
+  delay?: number
 }) {
   return (
     <motion.div
-      initial="idle"
-      whileHover="active"
-      variants={{ idle: {}, active: {} }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay }}
+      whileHover={{ scale: 1.02 }}
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
         'bg-white shadow-xs ring-1 ring-black/5',
         'data-dark:bg-gray-800 data-dark:ring-white/15',
+        'transition-shadow duration-300 hover:shadow-lg',
       )}
     >
       {graphic && (
@@ -49,7 +54,7 @@ export function BentoCard({
         <Subheading as="h3" dark={dark}>
           {eyebrow}
         </Subheading>
-        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-gray-950 group-data-dark:text-white">
+        <p className="mt-1 font-display text-2xl/8 font-semibold tracking-tight text-gray-950 group-data-dark:text-white">
           {title}
         </p>
         <p className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-dark:text-gray-400">

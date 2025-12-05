@@ -1,7 +1,6 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
-import { AnalyticsWrapper } from '@/components/analytics-wrapper'
-import { DevModeToggle } from '@/components/dev-mode-toggle'
+import { Analytics } from '@vercel/analytics/next'
 import { PresenceTracker } from '@/components/presence-tracker'
 
 export const metadata: Metadata = {
@@ -22,13 +21,12 @@ export default function RootLayout({
         <meta name="color-scheme" content="light" />
         <link
           rel="stylesheet"
-          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
+          href="https://api.fontshare.com/css?f[]=satoshi@400,500,600,700&f[]=clash-display@500,600,700&display=swap"
         />
       </head>
       <body className="text-gray-950 antialiased">
         {children}
-        <AnalyticsWrapper />
-        <DevModeToggle />
+        <Analytics />
         <PresenceTracker />
       </body>
     </html>
