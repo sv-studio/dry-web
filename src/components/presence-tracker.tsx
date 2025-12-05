@@ -21,14 +21,13 @@ export function PresenceTracker() {
     // Send heartbeat
     const sendHeartbeat = async () => {
       try {
-        const res = await fetch("/api/presence", {
+        await fetch("/api/presence", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ sessionId: sessionIdRef.current }),
         });
-        console.log("👁️ Presence heartbeat:", res.ok ? "✅" : "❌", sessionIdRef.current);
-      } catch (err) {
-        console.log("👁️ Presence heartbeat failed:", err);
+      } catch {
+        // Silent fail
       }
     };
 

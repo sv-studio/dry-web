@@ -5,6 +5,28 @@
   --font-display: 'Clash Display', system-ui, sans-serif;
 
   --radius-4xl: 2rem;
+
+  /* Purple-tinted Dark Palette (from cc-dashboard) */
+  --color-bg-primary: #12101a;
+  --color-bg-secondary: #0e0c14;
+  --color-bg-tertiary: #1a1520;
+  --color-bg-elevated: #252030;
+
+  /* Accent Colors */
+  --color-accent-primary: #c084fc;
+  --color-accent-dim: #9333ea;
+  --color-accent-secondary: #a78bfa;
+  --color-accent-tertiary: #818cf8;
+  --color-accent-pink: #f472b6;
+
+  /* Text */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #52525b;
+
+  /* Borders */
+  --color-border-subtle: #2a2535;
+  --color-border-default: #3d3548;
 }
 
 @keyframes move-x {
