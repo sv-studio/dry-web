@@ -214,6 +214,7 @@ function Testimonial() {
                   <img
                     alt=""
                     src="/testimonials/carely.png"
+                    loading="lazy"
                     className="aspect-3/4 w-full object-cover"
                   />
                 </div>
