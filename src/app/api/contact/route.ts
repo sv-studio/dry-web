@@ -19,13 +19,13 @@ export async function POST(request: NextRequest) {
 
     // Extract form fields
     const email = formData.get('email') as string
-    const contact_name = formData.get('contact_name') as string
+    const name = formData.get('contact_name') as string // form field → Airtable field
     const phone_number = formData.get('phone_number') as string
     const company = formData.get('company') as string
     const inquiry_notes = formData.get('inquiry_notes') as string
 
     // Validate required fields
-    if (!email || !contact_name) {
+    if (!email || !name) {
       return NextResponse.json(
         { error: 'Email and contact name are required' },
         { status: 400 }
@@ -41,23 +41,23 @@ export async function POST(request: NextRequest) {
 
     if (company && company.trim()) {
       try {
-        // Search for existing company
-        const existingCompanies = await companiesTable
+        // Search for existing client
+        const existingClients = await companiesTable
           .select({
-            filterByFormula: `{company_name} = "${company.trim()}"`,
+            filterByFormula: `{name} = "${company.trim()}"`,
             maxRecords: 1,
           })
           .firstPage()
 
-        if (existingCompanies.length > 0) {
-          // Company exists, use its ID
-          companyRecordId = existingCompanies[0].id
+        if (existingClients.length > 0) {
+          // Client exists, use its ID
+          companyRecordId = existingClients[0].id
         } else {
-          // Company doesn't exist, create new one
-          const newCompany = await companiesTable.create({
-            company_name: company.trim(),
+          // Client doesn't exist, create new one
+          const newClient = await companiesTable.create({
+            name: company.trim(),
           })
-          companyRecordId = newCompany.id
+          companyRecordId = newClient.id
         }
       } catch (error) {
         console.error('Error handling company:', error)
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
     // Create contact record
     const contactRecord: Record<string, string | string[] | undefined> = {
       email,
-      contact_name,
+      name,
       contact_type,
       inquiry_type,
     }
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (companyRecordId) {
-      contactRecord.company = [companyRecordId]
+      contactRecord.client = [companyRecordId]
     }
 
     // Save contact to Airtable
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
 
     const discordEmbed = createFormSubmissionEmbed(
       email,
-      contact_name,
+      name,
       company || undefined,
       phone_number || undefined,
     )
