@@ -119,12 +119,12 @@ function ContactFormSection() {
         </div>
 
         <div>
-          <label htmlFor="inquiry_notes" className="block text-sm font-medium text-gray-950">
+          <label htmlFor="notes" className="block text-sm font-medium text-gray-950">
             Mensaje
           </label>
           <textarea
-            name="inquiry_notes"
-            id="inquiry_notes"
+            name="notes"
+            id="notes"
             rows={4}
             disabled={isSubmitting}
             placeholder="Cuéntanos sobre tu proyecto..."

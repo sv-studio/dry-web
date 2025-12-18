@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const name = formData.get('contact_name') as string // form field → Airtable field
     const phone_number = formData.get('phone_number') as string
     const company = formData.get('company') as string
-    const inquiry_notes = formData.get('inquiry_notes') as string
+    const notes = formData.get('notes') as string
 
     // Validate required fields
     if (!email || !name) {
@@ -32,9 +32,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Auto-filled hidden fields
+    // Auto-filled hidden field
     const contact_type = 'potential_client'
-    const inquiry_type = 'sales_inquiry'
 
     // Handle company linking
     let companyRecordId: string | undefined
@@ -70,7 +69,6 @@ export async function POST(request: NextRequest) {
       email,
       name,
       contact_type,
-      inquiry_type,
     }
 
     // Add optional fields if provided
@@ -78,8 +76,8 @@ export async function POST(request: NextRequest) {
       contactRecord.phone_number = phone_number.trim()
     }
 
-    if (inquiry_notes && inquiry_notes.trim()) {
-      contactRecord.inquiry_notes = inquiry_notes.trim()
+    if (notes && notes.trim()) {
+      contactRecord.notes = notes.trim()
     }
 
     if (companyRecordId) {
