@@ -18,16 +18,16 @@ const testimonials = [
   {
     img: '/testimonials/adriana.jpg',
     name: 'Adriana Suárez',
-    title: 'Fundadora',
+    title: 'Co-fundadora & Contenido',
     quote:
-      'Creé DRY porque odio ver empresas perdiendo tiempo en tareas que una máquina puede hacer mejor.',
+      '7 años creando contenido educativo para Crehana, Interbank, PUCP y el BCRP. Más de 200 productos y docentes capacitados en LATAM y España.',
   },
   {
     img: '/testimonials/jorge.jpg',
     name: 'Jorge Vicuña',
-    title: 'Tecnología',
+    title: 'Co-fundador & Tech',
     quote:
-      'Lo construimos una vez y funciona siempre. Así de simple.',
+      'Construí productos digitales en Yape, Interbank y el Ministerio de Trabajo. Hoy enseño tecnología en la PUCP.',
   },
 ]
 

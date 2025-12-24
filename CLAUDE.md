@@ -109,7 +109,6 @@ flowchart TD
 | `phone_number` | Tel input    | ✅ Yes   | ❌ No     | -                    | Valid phone format (optional) | Contact phone number          |
 | `company`      | Text input   | ✅ Yes   | ❌ No     | -                    | -                             | Company name (if applicable)  |
 | `contact_type` | Hidden input | ❌ No    | ✅ Yes    | `'potential_client'` | -                             | Auto-filled: potential_client |
-| `inquiry_type` | Hidden input | ❌ No    | ✅ Yes    | `'sales_inquiry'`    | -                             | Auto-filled: sales_inquiry    |
 
 **Visible Fields (4):**
 - `email` (required)
@@ -117,9 +116,8 @@ flowchart TD
 - `phone_number` (optional)
 - `company` (optional - text input, will be linked to companies table)
 
-**Hidden Fields (2):**
+**Hidden Fields (1):**
 - `contact_type` = `'potential_client'` (auto-filled)
-- `inquiry_type` = `'sales_inquiry'` (auto-filled)
 
 **Airtable Structure:**
 - **Database:** Existing Airtable base (SV Contacts)
@@ -131,7 +129,6 @@ flowchart TD
 - `contact_name` → contact_name (type: singleLineText)
 - `phone_number` → phone_number (type: phoneNumber)
 - `contact_type` → contact_type (type: singleSelect: 'potential_client')
-- `inquiry_type` → inquiry_type (type: singleSelect: 'sales_inquiry')
 - `company` → company (type: multipleRecordLinks to companies table)
 
 **Company Field Logic:**
@@ -262,9 +259,8 @@ export async function POST(request: NextRequest) {
   const phone_number = formData.get('phone_number') as string;
   const company = formData.get('company') as string;
 
-  // Auto-filled hidden fields
+  // Auto-filled hidden field
   const contact_type = 'potential_client';
-  const inquiry_type = 'sales_inquiry';
 
   // Initialize Airtable
   const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN })

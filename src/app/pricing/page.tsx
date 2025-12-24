@@ -10,7 +10,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Precios',
   description:
-    'Capacitación en desarrollo con IA, desarrollo web y soluciones personalizadas. Elige el servicio que se ajuste a tus necesidades.',
+    'Capacitación en IA, desarrollo web, producción de contenido educativo y soluciones personalizadas. Elige el servicio que se ajuste a tus necesidades.',
 }
 
 const tiers = [
@@ -73,6 +73,34 @@ const tiers = [
     ],
   },
   {
+    name: 'Contenido Educativo' as const,
+    slug: 'educational-content',
+    description: 'Producción de contenido educativo con IA. Imágenes, video, locución y postproducción profesional.',
+    priceMonthly: null,
+    href: '/form',
+    highlights: [
+      { description: 'Generación de imágenes con IA' },
+      { description: 'Video con herramientas IA' },
+      { description: 'Locución profesional asistida por IA' },
+      { description: 'Desarrollo de guión pedagógico' },
+      { description: 'Postproducción profesional' },
+      { description: 'Precio según volumen de contenido' },
+    ],
+    features: [
+      { section: 'Producción', name: 'Desarrollo de guión', value: true },
+      { section: 'Producción', name: 'Generación de imágenes IA', value: true },
+      { section: 'Producción', name: 'Producción de video IA', value: true },
+      { section: 'Producción', name: 'Locución con IA', value: true },
+      { section: 'Producción', name: 'Postproducción profesional', value: true },
+      { section: 'Entregables', name: 'Videos educativos', value: true },
+      { section: 'Entregables', name: 'Material gráfico', value: true },
+      { section: 'Entregables', name: 'Recursos descargables', value: true },
+      { section: 'Soporte', name: 'Revisiones incluidas', value: '2 rondas' },
+      { section: 'Soporte', name: 'Formatos de entrega', value: 'MP4, PDF, PNG' },
+      { section: 'Soporte', name: 'Timeline', value: 'Según proyecto' },
+    ],
+  },
+  {
     name: 'Servicios Personalizados' as const,
     slug: 'tailored',
     description: 'Soluciones enterprise que escalan. Capacitación, desarrollo y soporte dedicado.',
@@ -108,7 +136,7 @@ function Header() {
     <Container className="mt-16">
       <Heading as="h1">Invierte en velocidad</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Capacitación en IA, desarrollo web y soluciones a medida. Pricing transparente, sin sorpresas.
+        Capacitación en IA, desarrollo web, contenido educativo y soluciones a medida. Pricing transparente, sin sorpresas.
       </Lead>
     </Container>
   )
@@ -119,7 +147,7 @@ function PricingCards() {
     <div className="relative py-24">
       <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-accent-primary/20 ring-inset" />
       <Container className="relative">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {tiers.map((tier, tierIndex) => (
             <PricingCard key={tierIndex} tier={tier} />
           ))}
@@ -325,6 +353,43 @@ function FrequentlyAskedQuestions() {
                   Podemos agregar páginas nuevas en cualquier momento. Si tienes un plan de mantenimiento,
                   páginas simples están incluidas. Para páginas con funcionalidad compleja, cotizamos por
                   separado. El costo depende de la complejidad y features necesarias.
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          {/* Contenido Educativo */}
+          <div className="py-16 border-b border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-950 mb-8">Contenido Educativo</h3>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <dl>
+                <dt className="text-sm font-semibold text-gray-950">
+                  ¿Qué herramientas de IA usan para la producción?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Usamos las mejores herramientas disponibles para cada tarea: generación de imágenes,
+                  síntesis de voz, edición de video y más. La IA acelera la producción, pero siempre
+                  hay revisión y postproducción humana para garantizar calidad profesional.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold text-gray-950">
+                  ¿Cómo se calcula el precio del contenido educativo?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  El precio depende del volumen y complejidad: cantidad de videos, duración, si incluye
+                  locución, animaciones o interactividad. Después de una llamada inicial, enviamos una
+                  cotización detallada con precio cerrado por proyecto.
+                </dd>
+              </dl>
+              <dl>
+                <dt className="text-sm font-semibold text-gray-950">
+                  ¿Puedo usar el contenido en cualquier plataforma?
+                </dt>
+                <dd className="mt-4 text-sm/6 text-gray-600">
+                  Sí. Entregamos los archivos finales en formatos estándar (MP4, PNG, PDF) que puedes
+                  subir a tu LMS, YouTube, redes sociales o cualquier plataforma. Los derechos del
+                  contenido producido son 100% tuyos.
                 </dd>
               </dl>
             </div>
