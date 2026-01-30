@@ -52,6 +52,7 @@ export function Screenshot({
         playsInline={true}
         controls
         preload="metadata"
+        aria-label="Video de demostración del producto"
       >
         Your browser does not support the video tag.
       </video>

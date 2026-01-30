@@ -29,5 +29,5 @@ export function AnimatedNumber({
     value.set(isInView ? end : start)
   }, [start, end, isInView, value])
 
-  return <motion.span ref={ref}>{display}</motion.span>
+  return <motion.span ref={ref} aria-live="polite">{display}</motion.span>
 }

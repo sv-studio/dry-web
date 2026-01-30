@@ -8,12 +8,12 @@ import { Logo } from './logo'
 function CallToAction() {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
-      <p className="text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+      <p className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-gray-950">
         Hablemos de tu proyecto
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="/form">
-          Comenzar
+          Solicitar consulta gratuita
         </Button>
       </div>
     </div>
@@ -21,11 +21,11 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-500">{children}</h3>
+  return <h3 className="text-base/6 font-medium text-gray-500">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
-  return <ul className="mt-6 space-y-4 text-sm/6">{children}</ul>
+  return <ul className="mt-6 space-y-4 text-base/6">{children}</ul>
 }
 
 function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
@@ -45,6 +45,7 @@ function Sitemap() {
       <div>
         <SitemapHeading>Servicios</SitemapHeading>
         <SitemapLinks>
+          <SitemapLink href="/company">Nosotros</SitemapLink>
           <SitemapLink href="/pricing">Precios</SitemapLink>
           <SitemapLink href="/form">Contacto</SitemapLink>
         </SitemapLinks>
@@ -83,7 +84,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-500">
+    <div className="text-base/6 text-gray-500">
       &copy; {new Date().getFullYear()} DRY
     </div>
   )
@@ -96,7 +97,8 @@ export function Footer({ showCTA = true, minimal = false }: { showCTA?: boolean;
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <Copyright />
-            <div className="flex items-center gap-6 text-sm text-gray-600">
+            <div className="flex items-center gap-6 text-base text-gray-600">
+              <Link href="/company" className="hover:text-accent-primary">Nosotros</Link>
               <Link href="/pricing" className="hover:text-accent-primary">Precios</Link>
               <Link href="/form" className="hover:text-accent-primary">Contacto</Link>
               <Link href="/terms" className="hover:text-accent-primary">Términos</Link>

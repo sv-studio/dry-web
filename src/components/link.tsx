@@ -6,9 +6,14 @@ export const Link = forwardRef(function Link(
   props: LinkProps & React.ComponentPropsWithoutRef<'a'>,
   ref: React.ForwardedRef<HTMLAnchorElement>,
 ) {
+  const { className, ...rest } = props
   return (
     <Headless.DataInteractive>
-      <NextLink ref={ref} {...props} />
+      <NextLink
+        ref={ref}
+        className={`focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary ${className ?? ''}`}
+        {...rest}
+      />
     </Headless.DataInteractive>
   )
 })
