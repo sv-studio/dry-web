@@ -29,7 +29,7 @@ function Logo({
       )}
     >
       <img alt="" src={src} className="size-4" />
-      <span className="text-sm/6 font-medium text-white">{label}</span>
+      <span className="text-base/6 font-medium text-white">{label}</span>
     </div>
   )
 }

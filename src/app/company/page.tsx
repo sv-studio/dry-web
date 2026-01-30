@@ -3,6 +3,7 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
+import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
@@ -10,62 +11,59 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Nosotros',
   description:
-    'Conoce a DRY, nuestra misión de entregar soluciones de software de calidad, y el equipo detrás de tu próximo proyecto.',
+    'Conoce a DRY: +7 años automatizando procesos y desarrollando software. Adriana Suárez (Contenido) y Jorge Vicuña (Tech) lideran el equipo.',
 }
 
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Helping companies generate revenue.</Heading>
+      <Heading as="h1">Automatiza lo repetitivo. Escala lo importante.</Heading>
       <Lead className="mt-6 max-w-3xl">
-        We’re on a mission to transform revenue organizations by harnessing vast
-        amounts of illegally acquired customer data.
+        Somos un estudio de software que ayuda a empresas a eliminar tareas manuales
+        y construir sistemas que crecen con su negocio.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
-          <p className="mt-6 text-sm/6 text-gray-600">
-            At Radiant, we are dedicated to transforming the way revenue
-            organizations source and close deals. Our mission is to provide our
-            customers with an unfair advantage over both their competitors and
-            potential customers through insight and analysis. We’ll stop at
-            nothing to get you the data you need to close a deal.
+          <h2 className="text-2xl font-medium tracking-tight">Nuestra misión</h2>
+          <p className="mt-6 text-base/6 text-gray-600">
+            En DRY creemos que tu equipo no debería perder tiempo en tareas que una
+            máquina puede hacer mejor. Nuestra misión es liberar a las personas para
+            que se enfoquen en lo que realmente importa: crear, decidir y hacer crecer
+            su negocio.
           </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
-            We’re customer-obsessed — putting the time in to build a detailed
-            financial picture of every one of our customers so that we know more
-            about your business than you do. We are in this together, mostly
-            because we are all implicated in large-scale financial crime. In our
-            history as a company, we’ve never lost a customer, because if any
-            one of us talks, we all go down.
+          <p className="mt-8 text-base/6 text-gray-600">
+            Trabajamos con empresas de todos los tamaños en Latinoamérica, desde startups
+            hasta corporaciones. Nuestro enfoque es simple: entendemos tu problema,
+            diseñamos una solución que escale, y la construimos con tecnología moderna.
+            Sin parches, sin deuda técnica innecesaria.
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
-                alt=""
+                alt="Equipo DRY trabajando"
                 src="/company/1.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
-                alt=""
+                alt="Desarrollo de software"
                 src="/company/2.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
-                alt=""
+                alt="Colaboración en proyectos"
                 src="/company/3.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
-                alt=""
+                alt="Resultados para clientes"
                 src="/company/4.jpg"
                 className="block size-full object-cover"
               />
@@ -73,31 +71,31 @@ function Header() {
           </div>
         </div>
         <div className="max-lg:mt-16 lg:col-span-1">
-          <Subheading>The Numbers</Subheading>
+          <Subheading>En números</Subheading>
           <hr className="mt-6 border-t border-gray-200" />
           <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt className="text-sm/6 text-gray-600">Raised</dt>
+              <dt className="text-base/6 text-gray-600">Años de experiencia</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                $<AnimatedNumber start={100} end={150} />M
+                +<AnimatedNumber start={0} end={7} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt className="text-sm/6 text-gray-600">Companies</dt>
+              <dt className="text-base/6 text-gray-600">Proyectos entregados</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                <AnimatedNumber start={15} end={30} />K
+                +<AnimatedNumber start={20} end={50} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-              <dt className="text-sm/6 text-gray-600">Deals Closed</dt>
+              <dt className="text-base/6 text-gray-600">Horas ahorradas/mes</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                <AnimatedNumber start={0.9} end={1.5} decimals={1} />M
+                +<AnimatedNumber start={500} end={1000} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2">
-              <dt className="text-sm/6 text-gray-600">Leads Generated</dt>
+              <dt className="text-base/6 text-gray-600">Clientes satisfechos</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                <AnimatedNumber start={150} end={200} />M
+                <AnimatedNumber start={10} end={20} />+
               </dd>
             </div>
           </dl>
@@ -111,61 +109,62 @@ function Person({
   name,
   description,
   img,
+  bio,
 }: {
   name: string
   description: string
   img: string
+  bio?: string
 }) {
   return (
-    <li className="flex items-center gap-4">
-      <img alt="" src={img} className="size-12 rounded-full" />
-      <div className="text-sm/6">
-        <h3 className="font-medium">{name}</h3>
-        <p className="text-gray-500">{description}</p>
+    <div className="flex flex-col">
+      <div className="flex items-center gap-4">
+        <img alt={`Foto de ${name}`} src={img} className="size-16 rounded-full object-cover" />
+        <div className="text-base/6">
+          <h3 className="font-medium">{name}</h3>
+          <p className="text-gray-500">{description}</p>
+        </div>
       </div>
-    </li>
+      {bio && (
+        <p className="mt-4 text-base/6 text-gray-600">{bio}</p>
+      )}
+    </div>
   )
 }
 
 function Team() {
   return (
     <Container className="mt-32">
-      <Subheading>Meet the team</Subheading>
+      <Subheading>El equipo</Subheading>
       <Heading as="h3" className="mt-2">
-        Founded by an all-star team.
+        Dos áreas, un objetivo.
       </Heading>
       <Lead className="mt-6 max-w-3xl">
-        Radiant is founded by two of the best sellers in the business and backed
-        by investors who look the other way.
+        DRY combina expertise técnico con estrategia de contenido para entregar
+        soluciones completas que realmente funcionan.
       </Lead>
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="max-w-lg">
-          <p className="text-sm/6 text-gray-600">
-            Years ago, while working as sales associates at rival companies,
-            Thomas, Ben, and Natalie were discussing a big client they had all
-            been competing for. Joking about seeing the terms of each other’s
-            offers, they had an idea: what if they shared data to win deals and
-            split the commission behind their companies’ backs? It turned out to
-            be an incredible success, and that idea became the kernel for
-            Radiant.
+          <p className="text-base/6 text-gray-600">
+            Fundamos DRY con una idea simple: las empresas pierden demasiado tiempo
+            en tareas que deberían ser automáticas. Desde entonces, hemos ayudado a
+            decenas de organizaciones a recuperar ese tiempo.
           </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
-            Today, Radiant transforms revenue organizations by harnessing
-            illegally acquired customer and competitor data, using it to provide
-            extraordinary leverage. More than 30,000 companies rely on Radiant
-            to undercut their competitors and extort their customers, all
-            through a single integrated platform.
+          <p className="mt-8 text-base/6 text-gray-600">
+            Nuestro modelo es diferente: precio fijo por proyecto, sin sorpresas.
+            Capacitamos a tu equipo para que no dependan de nosotros. Y construimos
+            sistemas que escalan, no parches que se rompen.
           </p>
           <div className="mt-6">
-            <Button className="w-full sm:w-auto" href="#">
-              Join us
+            <Button className="w-full sm:w-auto" href="/form">
+              Conversemos
             </Button>
           </div>
         </div>
         <div className="max-lg:order-first max-lg:max-w-lg">
           <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
             <img
-              alt=""
+              alt="Equipo DRY en acción"
               src="/company/5.jpg"
               className="block size-full object-cover"
             />
@@ -173,284 +172,74 @@ function Team() {
         </div>
       </div>
       <Subheading as="h3" className="mt-24">
-        The team
+        Quiénes somos
       </Subheading>
       <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-      >
+      <div className="mx-auto mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <Person
-          name="Michael Foster"
-          description="Co-Founder / CTO"
-          img="/team/michael-foster.jpg"
+          name="Adriana Suárez"
+          description="Contenido y Estrategia"
+          img="/team/adriana-suarez.jpg"
+          bio="Lidera la producción de contenido educativo y la estrategia de comunicación. +5 años en diseño instruccional y producción audiovisual para empresas como Crehana e instituciones educativas."
         />
         <Person
-          name="Dries Vincent"
-          description="Business Relations"
-          img="/team/dries-vincent.jpg"
+          name="Jorge Vicuña"
+          description="Tecnología y Desarrollo"
+          img="/team/jorge-vicuna.jpg"
+          bio="Arquitectura de software, automatizaciones y desarrollo web. +7 años construyendo sistemas para startups y corporaciones. Ex Interbank, Crehana, PUCP."
         />
-        <Person
-          name="Celeste Vandermark"
-          description="Front-end Developer"
-          img="/team/celeste-vandermark.jpg"
-        />
-        <Person
-          name="Courtney Henry"
-          description="Designer"
-          img="/team/courtney-henry.jpg"
-        />
-        <Person
-          name="Marcus Eldridge"
-          description="Director of Product"
-          img="/team/marcus-eldridge.jpg"
-        />
-        <Person
-          name="Whitney Francis"
-          description="Copywriter"
-          img="/team/whitney-francis.jpg"
-        />
-        <Person
-          name="Leonard Krasner"
-          description="Senior Designer"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Nolan Sheffield"
-          description="Principal Designer"
-          img="/team/nolan-sheffield.jpg"
-        />
-        <Person
-          name="Emily Selman"
-          description="VP, User Experience"
-          img="/team/emily-selman.jpg"
-        />
-      </ul>
+      </div>
     </Container>
   )
 }
 
-function Investors() {
+function Clients() {
   return (
     <Container className="mt-32">
-      <Subheading>Investors</Subheading>
+      <Subheading>Clientes</Subheading>
       <Heading as="h3" className="mt-2">
-        Funded by industry-leaders.
+        Empresas que confían en nosotros.
       </Heading>
       <Lead className="mt-6 max-w-3xl">
-        We are fortunate to be backed by the best investors in the industry —
-        both literal and metaphorical partners in crime.
+        Hemos trabajado con startups, ONGs, universidades y corporaciones
+        en Perú y Latinoamérica.
       </Lead>
-      <Subheading as="h3" className="mt-24">
-        Venture Capital
-      </Subheading>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2"
-      >
-        <li>
-          <img
-            alt="Remington Schwartz"
-            src="/investors/remington-schwartz.svg"
-            className="h-14"
-          />
-          <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
-            Remington Schwartz has been a driving force in the tech industry,
-            backing bold entrepreneurs who explore grey areas in financial and
-            privacy law. Their deep industry expertise and extensive political
-            lobbying provide their portfolio companies with favorable regulation
-            and direct access to lawmakers.
-          </p>
-        </li>
-        <li>
-          <img alt="Deccel" src="/investors/deccel.svg" className="h-14" />
-          <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
-            Deccel has been at the forefront of innovation, investing in
-            pioneering companies across various sectors, including technology,
-            consumer goods, and healthcare. Their philosophy of ‘plausible
-            deniability’ and dedication to looking the other way have helped
-            produce some of the world’s most controversial companies.
-          </p>
-        </li>
-      </ul>
-      <Subheading as="h3" className="mt-24">
-        Individual investors
-      </Subheading>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <Person
-          name="Kristin Watson"
-          description="TechNexus Ventures"
-          img="/individual-investors/kristin-watson.jpg"
-        />
-        <Person
-          name="Emma Dorsey"
-          description="Innovate Capital Partners"
-          img="/individual-investors/emma-dorsey.jpg"
-        />
-        <Person
-          name="Alicia Bell"
-          description="FutureWave Investments"
-          img="/individual-investors/alicia-bell.jpg"
-        />
-        <Person
-          name="Jenny Wilson"
-          description="SynergyTech Equity"
-          img="/individual-investors/jenny-wilson.jpg"
-        />
-        <Person
-          name="Anna Roberts"
-          description="NextGen Horizons"
-          img="/individual-investors/anna-roberts.jpg"
-        />
-        <Person
-          name="Benjamin Russel"
-          description="Pioneer Digital Ventures"
-          img="/individual-investors/benjamin-russel.jpg"
-        />
-      </ul>
+      <div className="mt-12">
+        <LogoCloud />
+      </div>
     </Container>
   )
 }
 
-function Testimonial() {
-  return (
-    <div className="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-5/4 lg:aspect-3/4">
-      <img
-        alt=""
-        src="/testimonials/veronica-winton.jpg"
-        className="absolute inset-0 object-cover"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-10% to-75% ring-1 ring-gray-950/10 ring-inset lg:from-25%"
-      />
-      <figure className="relative p-10">
-        <blockquote>
-          <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”']">
-            We&apos;ve managed to put two of our main competitors out of
-            business in 6 months.
-          </p>
-        </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
-          <p className="text-sm/6 font-medium text-white">Veronica Winton</p>
-          <p className="text-sm/6 font-medium">
-            <span className="bg-linear-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
-              CSO, Planeteria
-            </span>
-          </p>
-        </figcaption>
-      </figure>
-    </div>
-  )
-}
-
-function Careers() {
+function Values() {
   return (
     <Container className="my-32">
-      <Subheading>Careers</Subheading>
+      <Subheading>Cómo trabajamos</Subheading>
       <Heading as="h3" className="mt-2">
-        Join our fully remote team.
+        Principios que guían cada proyecto.
       </Heading>
-      <Lead className="mt-6 max-w-3xl">
-        We work together from all over the world, mainly from locations without
-        extradition agreements.
-      </Lead>
-      <div className="mt-24 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
-        <div className="lg:max-w-2xl">
-          <Subheading as="h3">Open positions</Subheading>
-          <div>
-            <table className="w-full text-left">
-              <colgroup>
-                <col className="w-2/3" />
-                <col className="w-1/3" />
-                <col className="w-0" />
-              </colgroup>
-              <thead className="sr-only">
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Location</th>
-                  <th scope="col">Read more</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pt-10 pb-0">
-                    <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
-                      Engineering
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">iOS Developer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Backend Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Product Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pt-5 pb-0">
-                    <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
-                      Design
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Principal Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Senior Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-gray-200">
+          <h4 className="text-lg font-semibold text-gray-950">Precio fijo</h4>
+          <p className="mt-4 text-base/6 text-gray-600">
+            Cotizamos por proyecto, no por hora. Sabes exactamente cuánto pagarás
+            antes de empezar. Sin sorpresas ni costos ocultos.
+          </p>
         </div>
-        <Testimonial />
+        <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-gray-200">
+          <h4 className="text-lg font-semibold text-gray-950">Autonomía para tu equipo</h4>
+          <p className="mt-4 text-base/6 text-gray-600">
+            Capacitamos a tu equipo para que puedan operar sin depender de nosotros.
+            Te entregamos las llaves, no te dejamos atado.
+          </p>
+        </div>
+        <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-gray-200">
+          <h4 className="text-lg font-semibold text-gray-950">Soluciones que escalan</h4>
+          <p className="mt-4 text-base/6 text-gray-600">
+            Construimos pensando en el futuro. Cuando tu negocio crezca 10×, tu
+            sistema debería poder manejarlo sin empezar de cero.
+          </p>
+        </div>
       </div>
     </Container>
   )
@@ -465,8 +254,8 @@ export default function Company() {
       </Container>
       <Header />
       <Team />
-      <Investors />
-      <Careers />
+      <Clients />
+      <Values />
       <Footer />
     </main>
   )

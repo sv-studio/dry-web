@@ -16,9 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" style={{ colorScheme: 'dark' }}>
+    <html lang="es">
       <head>
-        <meta name="color-scheme" content="dark" />
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/css?f[]=satoshi@400,500,600,700&f[]=clash-display@500,600,700&display=swap"
