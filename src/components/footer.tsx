@@ -45,7 +45,7 @@ function Sitemap() {
       <div>
         <SitemapHeading>Servicios</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/company">Nosotros</SitemapLink>
+          {/* <SitemapLink href="/company">Nosotros</SitemapLink> */}
           <SitemapLink href="/pricing">Precios</SitemapLink>
           <SitemapLink href="/form">Contacto</SitemapLink>
         </SitemapLinks>
@@ -98,7 +98,7 @@ export function Footer({ showCTA = true, minimal = false }: { showCTA?: boolean;
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <Copyright />
             <div className="flex items-center gap-6 text-base text-gray-600">
-              <Link href="/company" className="hover:text-accent-primary">Nosotros</Link>
+              {/* <Link href="/company" className="hover:text-accent-primary">Nosotros</Link> */}
               <Link href="/pricing" className="hover:text-accent-primary">Precios</Link>
               <Link href="/form" className="hover:text-accent-primary">Contacto</Link>
               <Link href="/terms" className="hover:text-accent-primary">Términos</Link>
