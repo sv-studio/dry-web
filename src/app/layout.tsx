@@ -1,7 +1,6 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-import { PresenceTracker } from '@/components/presence-tracker'
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +25,7 @@ export default function RootLayout({
       <body className="bg-white text-gray-950 antialiased">
         {children}
         <Analytics />
-        <PresenceTracker />
+
       </body>
     </html>
   )
